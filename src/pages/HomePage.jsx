@@ -1,0 +1,274 @@
+import { useEffect, useState } from 'react'
+import heroImage from '../assets/image-placeholder3.png'
+import skyImage from '../assets/image-placeholder2.png'
+import sunsetImage from '../assets/image-placeholder1.png'
+import companyLogoPlaceholder from '../assets/company-logo-placeholder.png'
+import LogoMarquee from '../components/LogoMarquee'
+
+const partners = Array.from({ length: 6 })
+const statCards = [
+  { value: 5588, suffix: '', label: 'Cases solved' },
+  { value: 160, suffix: '+', label: 'Experts on board' },
+  { value: 2874, suffix: '', label: 'Users assisted' },
+  { value: 16, suffix: ' L', label: 'Amount recovered' },
+]
+const issueCards = [
+  'Rejected Withdrawal',
+  'Delays due to employer',
+  'KYC mismatch',
+  'Closed old account issues',
+  'Incorrect service history',
+  'Exit not marked by company',
+]
+const solutionCards = ['PF Withdrawal', 'PF Transfer & Merge', 'EPF KYC Resolve']
+const faqItems = [
+  {
+    q: 'PF Withdrawal',
+    a: 'We verify KYC, service history, and claim category before filing. This reduces rejection risk and speeds up settlement.',
+  },
+  {
+    q: 'KYC Details',
+    a: 'Name, DOB, Aadhaar, PAN, and bank details must match EPFO records. We identify mismatches and provide the correction flow.',
+  },
+  {
+    q: 'Transfer Mapping',
+    a: 'If old PF balances are not merged, withdrawal may fail. We assist with transfer tracking and unresolved passbook entries.',
+  },
+  {
+    q: 'UAN & KYC',
+    a: 'If you do not remember your UAN or have linked-mobile issues, we guide recovery and account activation steps.',
+  },
+]
+
+function useCountUp(target, duration = 1400) {
+  const [value, setValue] = useState(0)
+
+  useEffect(() => {
+    let rafId = 0
+    const start = performance.now()
+
+    const step = (now) => {
+      const progress = Math.min((now - start) / duration, 1)
+      setValue(Math.floor(target * progress))
+      if (progress < 1) rafId = requestAnimationFrame(step)
+    }
+
+    rafId = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(rafId)
+  }, [target, duration])
+
+  return value
+}
+
+function StatNumber({ value, suffix }) {
+  const animated = useCountUp(value)
+  return (
+    <h3 className="text-2xl font-semibold">
+      {animated.toLocaleString()}
+      {suffix}
+    </h3>
+  )
+}
+
+function HomePage() {
+  return (
+    <>
+      <section className="bg-[linear-gradient(160deg,#1f2342,#2a2f58)] py-14 text-white">
+        <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-8 lg:grid-cols-[1fr_420px]">
+          <div>
+            <p className="text-xs text-emerald-200">AI powered PF issue detection</p>
+            <h1 className="mt-2 font-serif text-5xl leading-tight md:text-6xl">
+              EPF Withdrawal
+              <span className="block italic text-slate-100">Made Simple.</span>
+            </h1>
+            <div className="mt-5 grid max-w-md grid-cols-3 gap-3 text-[11px] text-indigo-100">
+              <div>Trusted experts</div>
+              <div>Quick checks</div>
+              <div>Maximum PF recovered</div>
+            </div>
+            <button className="mt-6 rounded-md bg-white px-5 py-2 text-xs font-bold text-slate-900">Connect Now</button>
+            <p className="mt-2 text-xs text-indigo-100">Rs4,00,000+ Claim Resolved</p>
+          </div>
+          <aside className="rounded-2xl bg-white p-4 shadow-2xl shadow-black/30">
+            <div className="mb-2 flex items-center justify-between">
+              <strong className="text-sm text-slate-900">Thread of Resolution</strong>
+              <span className="text-[10px] font-bold text-indigo-600">Live</span>
+            </div>
+            <p className="text-xs text-slate-600">
+              EPF withdrawal rejected while salary transfer mismatch persisted. We fixed KYC + service history and claim was successfully settled.
+            </p>
+            <img src={heroImage} alt="Story visual" className="mt-3 h-44 w-full rounded-lg object-cover" />
+          </aside>
+        </div>
+      </section>
+
+      <section className="bg-white py-10">
+        <div className="mx-auto w-[96vw] max-w-[1120px]">
+          <p className="text-center text-[10px] tracking-[0.16em] text-slate-500">TRUSTED BY PROFESSIONALS WORKING AT</p>
+          <div className="mt-4">
+            <LogoMarquee />
+          </div>
+          <div className="mt-4 grid gap-3 md:grid-cols-4">
+            {statCards.map((stat) => (
+              <article key={stat.label} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+                <StatNumber value={stat.value} suffix={stat.suffix} />
+                <p className="text-xs text-slate-500">{stat.label}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#eaf2f6] py-14">
+        <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-8 lg:grid-cols-[1fr_340px] lg:items-center">
+          <div>
+            <h2 className="font-serif text-5xl leading-tight">
+              Your PF might be stuck.<span className="block italic text-emerald-600">Know why.</span>
+            </h2>
+            <p className="mt-4 max-w-xl text-slate-600">
+              We identify hidden blockers and resolve KYC, service history, and transfer mapping issues before filing claims.
+            </p>
+            <div className="mt-4 flex gap-8 text-sm">
+              <div>
+                <strong className="block text-xl">Rs54,000+</strong>
+                <span className="text-slate-500">Recovered</span>
+              </div>
+              <div>
+                <strong className="block text-xl">3 min</strong>
+                <span className="text-slate-500">Quick check</span>
+              </div>
+              <div>
+                <strong className="block text-xl">Free</strong>
+                <span className="text-slate-500">Initial support</span>
+              </div>
+            </div>
+            <button className="mt-6 rounded-md bg-teal-600 px-5 py-2 text-xs font-bold text-white">Check My PF Now -&gt;</button>
+          </div>
+          <div className="rounded-[24px] border-8 border-slate-700 bg-white p-2">
+            <img src={skyImage} alt="PF screen" className="h-[360px] w-full rounded-[16px] object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-14">
+        <div className="mx-auto w-[96vw] max-w-[1120px]">
+          <h2 className="text-center font-serif text-5xl">Is this for you?</h2>
+          <p className="mt-2 text-center text-sm text-slate-500">We can help if your profile has these signs.</p>
+          <div className="mx-auto mt-6 grid max-w-[860px] gap-3 md:grid-cols-3">
+            {issueCards.map((x) => (
+              <div key={x} className="rounded-md border border-slate-200 px-4 py-3 text-xs text-slate-700">
+                {x}
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 flex justify-center">
+            <button className="rounded-md bg-[#1f2342] px-5 py-2 text-xs font-semibold text-white">Connect Now</button>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f4f6f8] py-14">
+        <div className="mx-auto w-[96vw] max-w-[1120px]">
+          <h2 className="text-center font-serif text-5xl">Every PF Problem. One Expert Solution.</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {solutionCards.map((x) => (
+              <article key={x} className="rounded-lg border border-slate-200 bg-white p-4">
+                <h3 className="text-lg font-semibold">{x}</h3>
+                <ul className="mt-3 list-disc space-y-1 pl-4 text-xs text-slate-600">
+                  <li>Structured case diagnostics</li>
+                  <li>Dedicated expert guidance</li>
+                  <li>Escalation support if needed</li>
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-14">
+        <div className="mx-auto w-[96vw] max-w-[1120px]">
+          <h2 className="text-center font-serif text-5xl">From Stuck to Settled in 5 Simple Steps</h2>
+          <div className="mt-6 grid gap-3 md:grid-cols-5">
+            {['Share details', 'Expert checks', 'Action plan', 'Document fixes', 'Settlement'].map((x, i) => (
+              <article key={x} className="rounded-lg border border-slate-200 bg-white p-3 text-center">
+                <div className="mx-auto mb-2 grid h-6 w-6 place-items-center rounded-full bg-indigo-100 text-[10px] font-bold text-indigo-700">{i + 1}</div>
+                <h3 className="text-xs font-semibold">{x}</h3>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f4f6f8] py-14">
+        <div className="mx-auto w-[96vw] max-w-[1120px]">
+          <h2 className="text-center font-serif text-5xl">Why choose us?</h2>
+          <div className="mt-6 grid gap-3 md:grid-cols-3">
+            {['End-to-end case handling', 'Transparent fixed pricing', 'Compliance team expertise'].map((x) => (
+              <article key={x} className="rounded-lg border border-slate-200 bg-white p-4">
+                <h3 className="text-sm font-semibold">{x}</h3>
+                <p className="mt-2 text-xs text-slate-600">Built for users facing complex PF delays and repeated claim rejection.</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-14">
+        <div className="mx-auto w-[96vw] max-w-[1120px]">
+          <h2 className="text-center font-serif text-5xl">9,000+ People Trust Nadal EPF</h2>
+          <div className="mt-6 grid gap-3 md:grid-cols-3">
+            {Array.from({ length: 9 }).map((_, i) => (
+              <article key={i} className="rounded-lg border border-slate-200 bg-white p-4">
+                <div className="flex items-center justify-between">
+                  <strong className="text-sm">User {i + 1}</strong>
+                  <span className="text-xs text-amber-500">*****</span>
+                </div>
+                <p className="mt-2 text-xs text-slate-600">Claim support was very clear and professional. Got faster resolution than expected.</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f4f6f8] py-14">
+        <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-8 lg:grid-cols-2">
+          <div>
+            <p className="text-xs text-emerald-600">REAL CASE STORY</p>
+            <h2 className="mt-2 font-serif text-5xl">
+              From 3 Rejections to <span className="italic text-emerald-600">Full Settlement</span>
+            </h2>
+            <p className="mt-3 text-sm text-slate-600">Case diagnosed, documents corrected, and final payout received with guided escalation support.</p>
+          </div>
+          <img src={sunsetImage} alt="Case story" className="h-64 w-full rounded-xl object-cover" />
+        </div>
+      </section>
+
+      <section className="bg-white py-14">
+        <div className="mx-auto w-[96vw] max-w-[1120px]">
+          <h2 className="text-center font-serif text-5xl">Nadal EPF In The News</h2>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
+            {partners.map((_, idx) => (
+              <img key={idx} src={companyLogoPlaceholder} alt="" className="h-8 w-16 object-contain" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f4f6f8] py-14">
+        <div className="mx-auto w-[96vw] max-w-[1120px]">
+          <h2 className="text-center font-serif text-5xl">Frequently Asked Questions</h2>
+          <div className="mx-auto mt-6 max-w-[860px] space-y-2">
+            {faqItems.map((item) => (
+              <details key={item.q} className="rounded border border-slate-200 bg-white px-4 py-3">
+                <summary className="cursor-pointer text-sm font-medium">{item.q}</summary>
+                <p className="mt-2 text-sm text-slate-600">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default HomePage

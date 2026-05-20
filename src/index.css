@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@keyframes logo-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-marquee-track {
+  animation: logo-marquee 24s linear infinite;
+}
