@@ -6,8 +6,17 @@ import PricingPage from './pages/PricingPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import FAQPage from './pages/FAQPage'
-
-const navItems = ['Blogs', 'EPFO Locator']
+import {
+    FaMapMarkerAlt,
+    FaPhoneAlt,
+    FaEnvelope,
+    FaClock,
+    FaLinkedinIn,
+    FaFacebookF,
+    FaTwitter,
+    FaInstagram,
+    FaWhatsapp,
+} from 'react-icons/fa';
 
 function App() {
   const [page, setPage] = useState('home')
@@ -36,12 +45,6 @@ function App() {
             <button onClick={() => setPage('faq')} className={page === 'faq' ? 'text-cyan-300' : 'hover:text-indigo-200'}>
               FAQ
             </button>
-            {navItems.map((item) => (
-              <a key={item} href="#0" className="hover:text-indigo-200">
-                {item}
-              </a>
-            ))}
-            <button className="rounded border border-indigo-200/40 px-2 py-1 text-[10px]">ThelyPrime v</button>
           </nav>
         </div>
       </header>
@@ -62,55 +65,121 @@ function App() {
         )}
       </main>
 
-      <footer className="bg-[#1f2342] py-14 text-indigo-100">
-        <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div>
-            <h3 className="text-lg font-semibold text-white">Get In Touch</h3>
-            <div className="mt-4 space-y-4 text-sm text-indigo-200/90">
+      <footer id="contact" className="bg-gray-100 text-gray-700">
+        <div className="max-w-7xl mx-auto px-6 py-14">
+          <div className="grid grid-cols-1 lg:grid-cols-12">
+            <div className="lg:col-span-4 space-y-5">
               <div>
-                <p className="font-semibold text-white">Registered Office</p>
-                <p className="mt-1">16/2, Mainroad, Tisaiyanvillai, Tirunelveli, Tamil Nadu - 627657, India</p>
+                <h5 className="text-lg font-semibold mb-3">Registered Office</h5>
+                <div className="flex items-start gap-3 text-sm leading-7">
+                  <FaMapMarkerAlt className="mt-1 text-blue-400" />
+                  <div>
+                    <p>16/2, Mainroad, Tisaiyanvillai,</p>
+                    <p>Tirunelveli, Tamil Nadu - 627 657, India</p>
+                  </div>
+                </div>
               </div>
+
               <div>
-                <p className="font-semibold text-white">Chennai Office</p>
-                <p className="mt-1">4/222, First Floor, East Coast Rd,</p>
-                <p>Palavakkam, Chennai, Tamil Nadu - 600 041, India</p>
+                <h5 className="text-lg font-semibold mb-3">Chennai Office</h5>
+                <div className="flex items-start gap-3 text-sm leading-7">
+                  <FaMapMarkerAlt className="mt-1 text-blue-400" />
+                  <div>
+                    <p>4/222, First Floor, East Coast Rd,</p>
+                    <p>Palavakkam, Chennai, Tamil Nadu - 600 041</p>
+                  </div>
+                </div>
               </div>
-              <p className="font-semibold text-cyan-300">bgv@nadalbusiness.com</p>
-              <p className="font-semibold text-white">(+91) 63858 71009</p>
+
+              <div>
+                <h5 className="text-lg font-semibold mb-3">Contact Info</h5>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-center gap-3">
+                    <FaPhoneAlt className="text-blue-400" />
+                    <span>(+91) 63858 71009</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <FaEnvelope className="text-blue-400" />
+                    <span>info@nadalbusiness.com</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h5 className="text-lg font-semibold mb-3">Working Hours</h5>
+                <div className="flex items-center gap-3 text-sm">
+                  <FaClock className="text-blue-400" />
+                  <span>9.30 AM IST - 6.30 PM IST (Mon-Sat)</span>
+                </div>
+              </div>
+
+              <div>
+                <h5 className="text-lg font-semibold mb-4">Follow Us</h5>
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://web.whatsapp.com/send?phone=916385871009"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-10 h-10 rounded-full bg-green-500 text-white transition flex items-center justify-center"
+                  >
+                    <FaWhatsapp />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/nadal-business-services/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-10 h-10 rounded-full bg-blue-600 text-white transition flex items-center justify-center"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/Nadalbusiness"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-10 h-10 rounded-full bg-blue-800 text-white transition flex items-center justify-center"
+                  >
+                    <FaFacebookF />
+                  </a>
+                  <a
+                    href="https://twitter.com/Nadalbusiness"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-10 h-10 rounded-full text-white bg-sky-500 transition flex items-center justify-center"
+                  >
+                    <FaTwitter />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/nadal_tisaiyanvillai_nellai/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-10 h-10 rounded-full text-white bg-pink-600 transition flex items-center justify-center"
+                  >
+                    <FaInstagram />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-8 mt-8 lg:mt-0">
+              <h5 className="text-lg font-semibold mb-5">Our Locations</h5>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1973.8367954040477!2d77.8618526927172!3d8.335194499579375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b047f35b8142947%3A0x84633c63b3b3be0b!2sNadal%20Business%20Services%20Private%20Limited!5e0!3m2!1sen!2sin!4v1605001695756!5m2!1sen!2sin"
+                  className="w-full h-[400px] rounded-xl border border-white/10"
+                  loading="lazy"
+                  allowFullScreen
+                ></iframe>
+
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d817.3955842449121!2d80.25534911847747!3d12.958373006552259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525de65a30cf19%3A0x2a6193a75fb1b610!2sWOCO%20Spaces!5e0!3m2!1sen!2sin!4v1752404854905!5m2!1sen!2sin"
+                  className="w-full h-[400px] rounded-xl border border-white/10"
+                  loading="lazy"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           </div>
-
-          <div>
-            <h4 className="font-semibold text-white">Quick Links</h4>
-            <ul className="mt-3 space-y-1 text-sm text-indigo-200/90">
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Aadhaar Verification</li>
-              <li>PAN Card Verification</li>
-              <li>Driving License Verification</li>
-              <li>Voter ID Verification</li>
-              <li>Passport Verification</li>
-              <li>Address Verification</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-white">Quick Links</h4>
-            <ul className="mt-3 space-y-1 text-sm text-indigo-200/90">
-              <li>Education Verification</li>
-              <li>Employment Verification</li>
-              <li>UAN Verification</li>
-              <li>Criminal Records Verification</li>
-              <li>Reference Check</li>
-              <li>Global database Verification</li>
-              <li>Social Media Verification</li>
-              <li>DIN Verification</li>
-            </ul>
-          </div>
-        </div>
-        <div className="mx-auto mt-8 w-[96vw] max-w-[1120px] border-t border-indigo-300/20 pt-4 text-sm text-indigo-200/80">
-          © 2026 NADAL Business Services Private Limited. All Rights Reserved.
+          <p className="mt-8 text-sm text-gray-600">© 2026 NADAL Business Services Private Limited. All Rights Reserved.</p>
         </div>
       </footer>
     </div>

@@ -97,8 +97,8 @@ function FAQPage() {
   return (
     <section className="bg-[#f4f6f8] py-14">
       <div className="mx-auto w-[92vw] max-w-[1120px]">
-        <h1 className="text-center text-6xl font-bold text-slate-700">Frequently Asked Questions</h1>
-        <p className="mt-4 text-center text-[28px] text-slate-500">
+        <h1 className="text-center text-4xl font-bold text-slate-700 md:text-5xl">Frequently Asked Questions</h1>
+        <p className="mt-4 text-center text-lg text-slate-500 md:text-2xl">
           Find answers to common questions about PF withdrawal, transfers, and more.
         </p>
 
@@ -107,19 +107,19 @@ function FAQPage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search questions..."
-            className="w-full rounded-xl border border-slate-300 bg-white px-5 py-4 text-[26px] outline-none"
+            className="w-full rounded-xl border border-slate-300 bg-white px-5 py-4 text-base outline-none md:text-xl"
           />
         </div>
 
         <div className="mt-8 grid gap-6 lg:grid-cols-[260px_1fr]">
           <aside className="rounded-xl border border-slate-300 bg-white p-4">
-            <h2 className="text-5xl font-semibold text-slate-700">Categories</h2>
+            <h2 className="text-3xl font-semibold text-slate-700">Categories</h2>
             <div className="mt-4 space-y-2">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`w-full rounded-md px-3 py-2 text-left text-[28px] ${
+                  className={`w-full rounded-md px-3 py-2 text-left text-base md:text-lg ${
                     activeCategory === cat ? 'bg-blue-100 text-blue-700' : 'text-slate-600 hover:bg-slate-50'
                   }`}
                 >
@@ -132,12 +132,12 @@ function FAQPage() {
           <div className="space-y-3">
             {filteredFaqs.map((item) => (
               <details key={item.q} className="rounded-xl border border-slate-300 bg-white px-5 py-4">
-                <summary className="cursor-pointer text-[36px] font-semibold text-slate-700">{item.q}</summary>
-                <p className="mt-3 text-[24px] leading-9 text-slate-600">{item.a}</p>
+                <summary className="cursor-pointer text-xl font-semibold text-slate-700 md:text-2xl">{item.q}</summary>
+                <p className="mt-3 text-base leading-7 text-slate-600 md:text-lg">{item.a}</p>
               </details>
             ))}
             {filteredFaqs.length === 0 && (
-              <div className="rounded-xl border border-slate-300 bg-white px-5 py-6 text-[24px] text-slate-500">
+              <div className="rounded-xl border border-slate-300 bg-white px-5 py-6 text-base text-slate-500 md:text-lg">
                 No questions found for this search/category.
               </div>
             )}

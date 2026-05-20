@@ -27,8 +27,8 @@ function AboutPage() {
     <>
       <section className="bg-[#f4f6f8] py-14">
         <div className="mx-auto w-[92vw] max-w-[1120px] text-slate-800">
-          <h1 className="text-5xl font-bold">About Us</h1>
-          <div className="mt-8 space-y-6 text-[22px] leading-[1.65] text-slate-700">
+          <h1 className="text-4xl font-bold md:text-5xl">About Us</h1>
+          <div className="mt-8 space-y-5 text-base leading-8 text-slate-700 md:text-lg">
             <p>Personal Finance decisions shape some of the most important moments in life.</p>
             <p>
               Yet when people face financial questions about investments, taxes, insurance, provident fund withdrawals, inheritance, or global
@@ -48,20 +48,20 @@ function AboutPage() {
           </div>
 
           <div className="mt-8">
-            <p className="text-[22px] text-slate-800">People are constantly dealing with questions like:</p>
-            <ul className="mt-4 list-disc space-y-3 pl-6 text-[22px] italic leading-[1.6] text-slate-700">
+            <p className="text-lg text-slate-800 md:text-xl">People are constantly dealing with questions like:</p>
+            <ul className="mt-4 list-disc space-y-2 pl-6 text-base italic leading-7 text-slate-700 md:text-lg">
               {questions.map((q) => (
                 <li key={q}>{q}</li>
               ))}
             </ul>
           </div>
 
-          <div className="mt-8 space-y-6 text-[22px] leading-[1.65] text-slate-700">
+          <div className="mt-8 space-y-5 text-base leading-8 text-slate-700 md:text-lg">
             <p>Some of these questions arise during major life events. Many others show up quietly in everyday financial decisions.</p>
             <p>
               To bring this vision to life, we created <span className="font-semibold text-slate-900">TheFynprint.</span>
             </p>
-            <h2 className="text-5xl font-bold text-slate-900">TheFynprint is a personal finance concierge platform.</h2>
+            <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">TheFynprint is a personal finance concierge platform.</h2>
             <p>It is designed for individuals who want clarity in a financial world that often feels complex and overwhelming.</p>
             <p>
               Through TheFynprint, people can seek unbiased guidance and hands-on assistance on complex personal finance matters from evaluating
@@ -80,12 +80,12 @@ function AboutPage() {
           </div>
 
           <div className="mt-10">
-            <h2 className="text-5xl font-bold text-slate-900">Our Philosophy</h2>
-            <p className="mt-4 text-[22px] leading-[1.65] text-slate-700">
+            <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Our Philosophy</h2>
+            <p className="mt-4 text-base leading-8 text-slate-700 md:text-lg">
               Personal finance should feel calm, not confusing. We earn trust by being independent, transparent about potential conflicts, and relentlessly
               clear in how we explain options.
             </p>
-            <p className="mt-6 text-[22px] text-slate-700">
+            <p className="mt-6 text-base text-slate-700 md:text-lg">
               For any questions or feedback, feel free to reach out at{' '}
               <a href="mailto:support@nadalbusiness.com" className="text-blue-600 underline">
                 support@nadalbusiness.com
@@ -97,12 +97,12 @@ function AboutPage() {
 
       <section className="bg-[#f4f6f8] py-10">
         <div className="mx-auto w-[92vw] max-w-[1120px]">
-          <h2 className="text-center text-5xl font-bold text-slate-900">Meet Our Team</h2>
+          <h2 className="text-center text-3xl font-bold text-slate-900 md:text-4xl">Meet Our Team</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {team.map((m) => (
               <article key={m.name} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
                 <img src={memberImage} alt="" className="h-14 w-14 rounded-full object-cover" />
-                <h3 className="mt-4 text-2xl font-semibold">{m.name}</h3>
+                <h3 className="mt-4 text-xl font-semibold">{m.name}</h3>
                 <p className="mt-2 text-slate-600">{m.role}</p>
               </article>
             ))}
@@ -112,13 +112,13 @@ function AboutPage() {
 
       <section className="bg-[#f4f6f8] py-10">
         <div className="mx-auto w-[92vw] max-w-[1120px]">
-          <h2 className="text-center text-5xl font-bold text-slate-900">Backed by the Best</h2>
+          <h2 className="text-center text-3xl font-bold text-slate-900 md:text-4xl">Backed by the Best</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {advisors.map((m) => (
               <article key={m.name} className="rounded-xl border border-slate-200 bg-[#eaf4fb] p-5 shadow-sm">
                 <p className="text-right text-xs text-slate-500">{m.type}</p>
                 <img src={heroImage} alt="" className="mt-2 h-14 w-14 rounded-full object-cover" />
-                <h3 className="mt-4 text-2xl font-semibold">{m.name}</h3>
+                <h3 className="mt-4 text-xl font-semibold">{m.name}</h3>
                 <p className="mt-2 text-slate-700">{m.role}</p>
                 <p className="mt-3 text-slate-600">{m.company}</p>
               </article>
