@@ -34,7 +34,7 @@ function App() {
       <header className={cn('fixed inset-x-0 top-0 z-50 border-b border-white/10', colors.header.bg)}>
         <div className="mx-auto flex h-12 w-[96vw] max-w-[1120px] items-center justify-between">
           <button onClick={() => handlePageChange('home')} className="hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Nadla EPF logo" className="h-6 w-auto" />
+            <img src={logo} alt="nadal EPF logo" className="h-6 w-auto" />
           </button>
           <nav className={cn('hidden items-center gap-6 text-sm lg:flex', colors.header.text)}>
             <button onClick={() => handlePageChange('home')} className={page === 'home' ? colors.header.activeLink : colors.header.hoverLink}>

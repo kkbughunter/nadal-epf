@@ -35,14 +35,14 @@ function AboutPage() {
               diversification they are often left navigating a fragmented system filled with conflicting advice, product sales, and confusing
               information.
             </p>
-            <p className="font-semibold text-slate-900">NadlaEPF was founded to change that.</p>
+            <p className="font-semibold text-slate-900">nadalEPF was founded to change that.</p>
             <p>
               We believe that every individual deserves on-demand, clear, unbiased guidance and hands-on assistance when dealing with their money.
               Not product pushing. Not generic internet gyan. But legit expertise that helps people solve real financial problems and make confident
               decisions.
             </p>
             <p>
-              NadlaEPF is building the infrastructure and ecosystem for a new kind of financial experience in India, one where individuals always have
+              nadalEPF is building the infrastructure and ecosystem for a new kind of financial experience in India, one where individuals always have
               access to trusted help whenever they need it.
             </p>
           </div>

@@ -253,7 +253,7 @@ function PFReportPage({ onBookConsultation }) {
                 Amey Kanekar
               </p>
 
-              <p className="text-slate-600">Co-Founder, NadlaEPF</p>
+              <p className="text-slate-600">Co-Founder, nadalEPF</p>
             </div>
           </div>
 

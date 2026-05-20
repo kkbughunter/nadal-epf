@@ -23,14 +23,14 @@ const steps = [
 ]
 
 const pricingFaqs = [
-  'How much does NadlaEPF charge as a PF consultant for withdrawal and transfer?',
-  'In how many days can NadlaEPF resolve my PF withdrawal or transfer issue?',
-  'What does NadlaEPF 100% PF claim guarantee imply?',
-  'Will NadlaEPF handle my PF work fully online, or do I have to visit the EPFO office?',
+  'How much does nadalEPF charge as a PF consultant for withdrawal and transfer?',
+  'In how many days can nadalEPF resolve my PF withdrawal or transfer issue?',
+  'What does nadalEPF 100% PF claim guarantee imply?',
+  'Will nadalEPF handle my PF work fully online, or do I have to visit the EPFO office?',
   'Do I need to visit a branch to pay any fee or only in Mumbai?',
   'Can I mitigate PF withdrawal delays if I do not know my UAN or PF account details?',
-  'What if my PF case gets delayed after I start with NadlaEPF?',
-  'Does NadlaEPF ever ask for extra payment to speed up my PF claim with EPFO?',
+  'What if my PF case gets delayed after I start with nadalEPF?',
+  'Does nadalEPF ever ask for extra payment to speed up my PF claim with EPFO?',
 ]
 
 function PricingPage() {
@@ -53,7 +53,7 @@ function PricingPage() {
               <li><span className="font-semibold text-[#088395]">✓</span> Full transparent pricing shared upfront</li>
               <li><span className="font-semibold text-[#088395]">✓</span> No extra fees charged in the middle of your case</li>
               <li><span className="font-semibold text-[#088395]">✓</span> Dedicated point of contact assigned to your case</li>
-              <li><span className="font-semibold text-[#088395]">✓</span> Full process handled end-to-end by NadlaEPF</li>
+              <li><span className="font-semibold text-[#088395]">✓</span> Full process handled end-to-end by nadalEPF</li>
             </ul>
             <div className="mt-5 grid grid-cols-2 gap-4 border-t pt-4 text-center">
               <div>
@@ -77,7 +77,7 @@ function PricingPage() {
           <p className="mt-2 text-center text-slate-500">Transparent, comprehensive PF resolution with guarantees at every step.</p>
           <div className="mt-8 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
             <div className="grid grid-cols-[2fr_1fr_1fr] bg-slate-50 px-4 py-3 text-xs font-semibold text-slate-600">
-              <div>Basis</div><div className="text-center text-[#088395]">NadlaEPF</div><div className="text-center">Other PF Consultants</div>
+              <div>Basis</div><div className="text-center text-[#088395]">nadalEPF</div><div className="text-center">Other PF Consultants</div>
             </div>
             {compareRows.map((row) => (
               <div key={row} className="grid grid-cols-[2fr_1fr_1fr] border-t border-slate-100 px-4 py-3 text-sm">
@@ -110,7 +110,7 @@ function PricingPage() {
           <div>
             <p className="text-xs font-semibold tracking-[0.16em] text-[#088395]">PAN-INDIA PF COVERAGE</p>
             <h2 className="mt-2 text-4xl font-bold">PF solutions for every corner of India.</h2>
-            <p className="mt-3 text-slate-600">From metros to critical EPFO branches, NadlaEPF supports end-to-end claim resolution across locations.</p>
+            <p className="mt-3 text-slate-600">From metros to critical EPFO branches, nadalEPF supports end-to-end claim resolution across locations.</p>
           </div>
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow">
             <img src={mapImage} alt="All India Network coverage map" className="h-[320px] w-full object-cover" />
@@ -126,7 +126,7 @@ function PricingPage() {
             <LogoMarquee />
           </div>
           <article className="mx-auto mt-8 max-w-[760px] rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-            <p className="text-slate-700">"My PF was stuck for 2 years due to KYC mismatch. NadlaEPF resolved it in just 45 days!"</p>
+            <p className="text-slate-700">"My PF was stuck for 2 years due to KYC mismatch. nadalEPF resolved it in just 45 days!"</p>
             <div className="mt-3 flex items-center justify-between text-xs text-slate-500">
               <span>Tanayjira</span>
               <span className="font-semibold text-[#088395]">Recovered Rs 3,59,000</span>
