@@ -6,6 +6,8 @@ import PricingPage from './pages/PricingPage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import FAQPage from './pages/FAQPage'
+import FormModal from './components/FormModal'
+import { colors, cn } from './config/colors'
 import {
     FaMapMarkerAlt,
     FaPhoneAlt,
@@ -20,29 +22,37 @@ import {
 
 function App() {
   const [page, setPage] = useState('home')
+  const [showFormModal, setShowFormModal] = useState(false)
+
+  const handlePageChange = (newPage) => {
+    setPage(newPage)
+    window.scrollTo(0, 0)
+  }
 
   return (
-    <div className="bg-[#f4f6f8] text-slate-900">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#1f2342]">
+    <div className={cn(colors.bg.page, colors.text.primary)}>
+      <header className={cn('fixed inset-x-0 top-0 z-50 border-b border-white/10', colors.header.bg)}>
         <div className="mx-auto flex h-12 w-[96vw] max-w-[1120px] items-center justify-between">
-          <img src={logo} alt="Nadla EPF logo" className="h-6 w-auto" />
-          <nav className="hidden items-center gap-4 text-[11px] text-white lg:flex">
-            <button onClick={() => setPage('home')} className={page === 'home' ? 'text-cyan-300' : 'hover:text-indigo-200'}>
+          <button onClick={() => handlePageChange('home')} className="hover:opacity-80 transition-opacity">
+            <img src={logo} alt="Nadla EPF logo" className="h-6 w-auto" />
+          </button>
+          <nav className={cn('hidden items-center gap-6 text-sm lg:flex', colors.header.text)}>
+            <button onClick={() => handlePageChange('home')} className={page === 'home' ? colors.header.activeLink : colors.header.hoverLink}>
               Home
             </button>
-            <button onClick={() => setPage('pf-report')} className={page === 'pf-report' ? 'text-cyan-300' : 'hover:text-indigo-200'}>
+            <button onClick={() => handlePageChange('pf-report')} className={page === 'pf-report' ? colors.header.activeLink : colors.header.hoverLink}>
               PF Report
             </button>
-            <button onClick={() => setPage('pricing')} className={page === 'pricing' ? 'text-cyan-300' : 'hover:text-indigo-200'}>
+            <button onClick={() => handlePageChange('pricing')} className={page === 'pricing' ? colors.header.activeLink : colors.header.hoverLink}>
               Pricing
             </button>
-            <button onClick={() => setPage('about')} className={page === 'about' ? 'text-cyan-300' : 'hover:text-indigo-200'}>
+            <button onClick={() => handlePageChange('about')} className={page === 'about' ? colors.header.activeLink : colors.header.hoverLink}>
               About Us
             </button>
-            <button onClick={() => setPage('contact')} className={page === 'contact' ? 'text-cyan-300' : 'hover:text-indigo-200'}>
+            <button onClick={() => handlePageChange('contact')} className={page === 'contact' ? colors.header.activeLink : colors.header.hoverLink}>
               Contact Us
             </button>
-            <button onClick={() => setPage('faq')} className={page === 'faq' ? 'text-cyan-300' : 'hover:text-indigo-200'}>
+            <button onClick={() => handlePageChange('faq')} className={page === 'faq' ? colors.header.activeLink : colors.header.hoverLink}>
               FAQ
             </button>
           </nav>
@@ -51,19 +61,21 @@ function App() {
 
       <main className="pt-12">
         {page === 'pf-report' ? (
-          <PFReportPage />
+          <PFReportPage onBookConsultation={() => setShowFormModal(true)} />
         ) : page === 'pricing' ? (
           <PricingPage />
         ) : page === 'about' ? (
           <AboutPage />
         ) : page === 'contact' ? (
-          <ContactPage />
+          <ContactPage onConnectClick={() => setShowFormModal(true)} />
         ) : page === 'faq' ? (
           <FAQPage />
         ) : (
-          <HomePage />
+          <HomePage onConnectClick={() => setShowFormModal(true)} />
         )}
       </main>
+
+      <FormModal isOpen={showFormModal} onClose={() => setShowFormModal(false)} />
 
       <footer id="contact" className="bg-gray-100 text-gray-700">
         <div className="max-w-7xl mx-auto px-6 py-14">

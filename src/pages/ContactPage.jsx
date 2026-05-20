@@ -1,8 +1,10 @@
-function ContactPage() {
+import { colors, cn } from '../config/colors'
+
+function ContactPage({ onConnectClick }) {
   return (
-    <section className="bg-[#f4f6f8] py-14">
-      <div className="mx-auto w-[92vw] max-w-[1120px] text-slate-800">
-        <h1 className="text-5xl font-bold">Contact Us</h1>
+    <section className={cn('py-14', colors.bg.page)}>
+      <div className={cn('mx-auto w-[92vw] max-w-[1120px]', colors.text.secondary)}>
+        <h1 className={cn('text-5xl font-bold', colors.primary.text)}>Contact Us</h1>
         <p className="mt-6 text-[18px] leading-8">
           If you ever face any issue with our services or want to share a feedback you can reach out to us at:
         </p>
@@ -23,7 +25,7 @@ function ContactPage() {
 
           <div>
             <h2 className="text-3xl font-semibold">New Enquiry:</h2>
-            <button className="mt-3 rounded-md bg-blue-600 px-5 py-2 text-sm font-semibold text-white">
+            <button onClick={onConnectClick} className={cn('mt-3 rounded-md px-5 py-2 text-sm font-semibold text-white', colors.accent.main, colors.accent.hover)}>
               Connect Now
             </button>
           </div>
@@ -51,7 +53,7 @@ function ContactPage() {
 
           <div>
             <p className="text-3xl font-semibold">
-              Reach out to us: <span className="font-normal text-blue-600">+91 0000000000</span>
+              Reach out to us: <span className="font-normal text-blue-600">+91 63858 71009</span>
             </p>
             <p className="mt-2 text-base text-slate-600">
               Note: This number will only be available Monday to Friday, 10 AM to 7 PM IST.

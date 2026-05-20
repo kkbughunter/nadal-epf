@@ -95,10 +95,10 @@ function FAQPage() {
   }, [activeCategory, query])
 
   return (
-    <section className="bg-[#f4f6f8] py-14">
+    <section className="bg-purple-50 py-14">
       <div className="mx-auto w-[92vw] max-w-[1120px]">
-        <h1 className="text-center text-4xl font-bold text-slate-700 md:text-5xl">Frequently Asked Questions</h1>
-        <p className="mt-4 text-center text-lg text-slate-500 md:text-2xl">
+        <h1 className="text-center text-3xl font-bold text-purple-900 md:text-4xl">Frequently Asked Questions</h1>
+        <p className="mt-4 text-center text-base text-slate-500 md:text-lg">
           Find answers to common questions about PF withdrawal, transfers, and more.
         </p>
 
@@ -107,20 +107,20 @@ function FAQPage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search questions..."
-            className="w-full rounded-xl border border-slate-300 bg-white px-5 py-4 text-base outline-none md:text-xl"
+            className="w-full rounded-xl border border-slate-300 bg-white px-5 py-4 text-sm outline-none md:text-base"
           />
         </div>
 
         <div className="mt-8 grid gap-6 lg:grid-cols-[260px_1fr]">
-          <aside className="rounded-xl border border-slate-300 bg-white p-4">
-            <h2 className="text-3xl font-semibold text-slate-700">Categories</h2>
+          <aside className="rounded-xl border border-purple-300 bg-purple-50 p-4">
+            <h2 className="text-lg font-semibold text-purple-900">Categories</h2>
             <div className="mt-4 space-y-2">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`w-full rounded-md px-3 py-2 text-left text-base md:text-lg ${
-                    activeCategory === cat ? 'bg-blue-100 text-blue-700' : 'text-slate-600 hover:bg-slate-50'
+                  className={`w-full rounded-md px-3 py-2 text-left text-sm md:text-base ${
+                    activeCategory === cat ? 'bg-orange-200 text-orange-900' : 'text-slate-600 hover:bg-purple-100'
                   }`}
                 >
                   {cat}
@@ -131,13 +131,13 @@ function FAQPage() {
 
           <div className="space-y-3">
             {filteredFaqs.map((item) => (
-              <details key={item.q} className="rounded-xl border border-slate-300 bg-white px-5 py-4">
-                <summary className="cursor-pointer text-xl font-semibold text-slate-700 md:text-2xl">{item.q}</summary>
-                <p className="mt-3 text-base leading-7 text-slate-600 md:text-lg">{item.a}</p>
+              <details key={item.q} className="rounded-xl border border-purple-300 bg-white px-5 py-4">
+                <summary className="cursor-pointer text-base font-semibold text-purple-900 md:text-lg">{item.q}</summary>
+                <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">{item.a}</p>
               </details>
             ))}
             {filteredFaqs.length === 0 && (
-              <div className="rounded-xl border border-slate-300 bg-white px-5 py-6 text-base text-slate-500 md:text-lg">
+              <div className="rounded-xl border border-purple-300 bg-white px-5 py-6 text-sm text-slate-500 md:text-base">
                 No questions found for this search/category.
               </div>
             )}

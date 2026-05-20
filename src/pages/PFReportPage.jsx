@@ -43,7 +43,7 @@ const faqs = [
   'Why should I worry about issues in my PF account now?',
 ]
 
-function PFReportPage() {
+function PFReportPage({ onBookConsultation }) {
   return (
     <>
       <section className="bg-white py-12">
@@ -55,7 +55,7 @@ function PFReportPage() {
             </h1>
             <p className="mt-4 max-w-lg text-lg text-slate-700">1.3 Crore Indians could not withdraw their PF money in 2024</p>
             <div className="mt-6">
-              <LeadForm light />
+              <LeadForm light onBookConsultation={onBookConsultation} />
             </div>
           </div>
           <div className="flex justify-center">
@@ -80,12 +80,8 @@ function PFReportPage() {
             </ul>
           </div>
           <div className="flex items-center justify-center lg:justify-end">
-            <LeadForm light />
+            <LeadForm light onBookConsultation={onBookConsultation} />
           </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-14">
         <div className="mx-auto w-[96vw] max-w-[1120px]">
           <h2 className="text-5xl font-bold">Who should check their PF?</h2>
           <p className="mt-3 text-slate-600">Your PF amount may not be withdrawable if your profile matches these conditions</p>
@@ -99,20 +95,20 @@ function PFReportPage() {
             ))}
           </div>
           <div className="mt-10 flex justify-center">
-            <LeadForm light />
+            <LeadForm light onBookConsultation={onBookConsultation} />
           </div>
         </div>
       </section>
 
-      <section className="bg-[#00195e] py-12 text-white">
+      <section className="bg-purple-900 py-12 text-white">
         <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-5 lg:grid-cols-3">
-          <article className="rounded-md bg-white p-5 text-slate-900">
+          <article className="rounded-md bg-white p-5 text-purple-900">
             <h3 className="text-3xl font-bold">Why check your PF account?</h3>
             <p className="mt-3 text-sm leading-6 text-slate-700">
               PF is a major retirement fund, yet many employees face difficulties in withdrawal due to hidden issues.
             </p>
           </article>
-          <article className="rounded-md bg-white p-5 text-slate-900">
+          <article className="rounded-md bg-white p-5 text-purple-900">
             <h3 className="text-3xl font-bold">Why your PF can get stuck?</h3>
             <ul className="mt-3 space-y-2 text-sm text-slate-700">
               <li>❌ Incorrect employer contributions</li>
@@ -122,14 +118,10 @@ function PFReportPage() {
             </ul>
           </article>
           <div className="flex items-center justify-center lg:justify-end">
-            <LeadForm />
+            <LeadForm onBookConsultation={onBookConsultation} />
           </div>
-        </div>
-      </section>
-
-      <section className="bg-[#dcebf5] py-14">
         <div className="mx-auto w-[96vw] max-w-[1120px]">
-          <h2 className="text-5xl font-bold">Frequently asked questions</h2>
+          <h2 className="text-5xl font-bold text-purple-900">Frequently asked questions</h2>
           <div className="mt-6 space-y-2">
             {faqs.map((q) => (
               <details key={q} className="rounded border border-slate-300 bg-white px-4 py-3">
@@ -155,12 +147,5 @@ function PFReportPage() {
             </div>
           </div>
           <div className="flex justify-center lg:justify-end">
-            <LeadForm light />
+            <LeadForm light onBookConsultation={onBookConsultation} />
           </div>
-        </div>
-      </section>
-    </>
-  )
-}
-
-export default PFReportPage
