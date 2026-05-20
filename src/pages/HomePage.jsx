@@ -73,26 +73,26 @@ function StatNumber({ value, suffix }) {
 function HomePage({ onConnectClick }) {
   return (
     <>
-      <section className="bg-[linear-gradient(160deg,#4a2c5e,#6b3d7f)] py-14 text-white">
-        <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-8 lg:grid-cols-[1fr_420px]">
+      <section className="flex min-h-[calc(90vh-3rem)] items-center bg-[linear-gradient(160deg,#09637E,#088395)] py-14 text-white">
+        <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-8 lg:grid-cols-[1fr_420px] lg:items-center">
           <div>
-            <p className="text-xs text-orange-300">AI powered PF issue detection</p>
+            <p className="text-xs text-[#EBF4F6]">AI powered PF issue detection</p>
             <h1 className="mt-2 font-serif text-5xl leading-tight md:text-6xl">
               EPF Withdrawal
-              <span className="block italic text-purple-100">Made Simple.</span>
+              <span className="block italic text-[#EBF4F6]">Made Simple.</span>
             </h1>
-            <div className="mt-5 grid max-w-md grid-cols-3 gap-3 text-[11px] text-orange-200">
+            <div className="mt-5 grid max-w-md grid-cols-3 gap-3 text-[11px] text-[#EBF4F6]">
               <div>Trusted experts</div>
               <div>Quick checks</div>
               <div>Maximum PF recovered</div>
             </div>
-            <button onClick={onConnectClick} className="mt-6 rounded-md bg-white px-5 py-2 text-xs font-bold text-purple-900 hover:bg-orange-100">Connect Now</button>
-            <p className="mt-2 text-xs text-orange-200">Rs4,00,000+ Claim Resolved</p>
+            <button onClick={onConnectClick} className="mt-6 rounded-md bg-white px-5 py-2 text-xs font-bold text-[#09637E] hover:bg-[#EBF4F6]">Connect Now</button>
+            <p className="mt-2 text-xs text-[#EBF4F6]">Rs4,00,000+ Claim Resolved</p>
           </div>
           <aside className="rounded-2xl bg-white p-4 shadow-2xl shadow-black/30">
             <div className="mb-2 flex items-center justify-between">
               <strong className="text-sm text-slate-900">Thread of Resolution</strong>
-              <span className="text-[10px] font-bold text-indigo-600">Live</span>
+              <span className="text-[10px] font-bold text-[#088395]">Live</span>
             </div>
             <p className="text-xs text-slate-600">
               EPF withdrawal rejected while salary transfer mismatch persisted. We fixed KYC + service history and claim was successfully settled.
@@ -119,11 +119,11 @@ function HomePage({ onConnectClick }) {
         </div>
       </section>
 
-      <section className="bg-[#eaf2f6] py-14">
+      <section className="bg-[#EBF4F6] py-14">
         <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-8 lg:grid-cols-[1fr_340px] lg:items-center">
           <div>
             <h2 className="font-serif text-5xl leading-tight">
-              Your PF might be stuck.<span className="block italic text-emerald-600">Know why.</span>
+              Your PF might be stuck.<span className="block italic text-[#088395]">Know why.</span>
             </h2>
             <p className="mt-4 max-w-xl text-slate-600">
               We identify hidden blockers and resolve KYC, service history, and transfer mapping issues before filing claims.
@@ -142,7 +142,7 @@ function HomePage({ onConnectClick }) {
                 <span className="text-slate-500">Initial support</span>
               </div>
             </div>
-            <button className="mt-6 rounded-md bg-teal-600 px-5 py-2 text-xs font-bold text-white">Check My PF Now -&gt;</button>
+            <button className="mt-6 rounded-md bg-[#088395] px-5 py-2 text-xs font-bold text-white hover:bg-[#09637E]">Check My PF Now -&gt;</button>
           </div>
           <div className="rounded-[24px] border-8 border-slate-700 bg-white p-2">
             <img src={skyImage} alt="PF screen" className="h-[360px] w-full rounded-[16px] object-cover" />
@@ -156,24 +156,24 @@ function HomePage({ onConnectClick }) {
           <p className="mt-2 text-center text-sm text-slate-500">We can help if your profile has these signs.</p>
           <div className="mx-auto mt-6 grid max-w-[860px] gap-3 md:grid-cols-3">
             {issueCards.map((x) => (
-              <div key={x} className="rounded-md border border-purple-300 bg-purple-50 px-4 py-3 text-xs text-purple-900">
+              <div key={x} className="rounded-md border border-[#7AB2B2] bg-[#EBF4F6] px-4 py-3 text-xs text-[#09637E]">
                 {x}
               </div>
             ))}
           </div>
           <div className="mt-6 flex justify-center">
-            <button onClick={onConnectClick} className="rounded-md bg-purple-900 px-5 py-2 text-xs font-semibold text-white hover:bg-purple-800">Connect Now</button>
+            <button onClick={onConnectClick} className="rounded-md bg-[#09637E] px-5 py-2 text-xs font-semibold text-white hover:bg-[#088395]">Connect Now</button>
           </div>
         </div>
       </section>
 
-      <section className="bg-purple-50 py-14">
+      <section className="bg-[#EBF4F6] py-14">
         <div className="mx-auto w-[96vw] max-w-[1120px]">
           <h2 className="text-center font-serif text-5xl">Every PF Problem. One Expert Solution.</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             {solutionCards.map((x) => (
-              <article key={x} className="rounded-lg border border-purple-300 bg-white p-4 shadow-sm">
-                <h3 className="text-lg font-semibold text-purple-900">{x}</h3>
+              <article key={x} className="rounded-lg border border-[#7AB2B2] bg-white p-4 shadow-sm">
+                <h3 className="text-lg font-semibold text-[#09637E]">{x}</h3>
                 <ul className="mt-3 list-disc space-y-1 pl-4 text-xs text-slate-600">
                   <li>Structured case diagnostics</li>
                   <li>Dedicated expert guidance</li>
@@ -191,7 +191,7 @@ function HomePage({ onConnectClick }) {
           <div className="mt-6 grid gap-3 md:grid-cols-5">
             {['Share details', 'Expert checks', 'Action plan', 'Document fixes', 'Settlement'].map((x, i) => (
               <article key={x} className="rounded-lg border border-slate-200 bg-white p-3 text-center">
-                <div className="mx-auto mb-2 grid h-6 w-6 place-items-center rounded-full bg-indigo-100 text-[10px] font-bold text-indigo-700">{i + 1}</div>
+                <div className="mx-auto mb-2 grid h-6 w-6 place-items-center rounded-full bg-[#EBF4F6] text-[10px] font-bold text-[#09637E]">{i + 1}</div>
                 <h3 className="text-xs font-semibold">{x}</h3>
               </article>
             ))}
@@ -201,12 +201,12 @@ function HomePage({ onConnectClick }) {
 
       <section className="bg-white py-14">
         <div className="mx-auto w-[96vw] max-w-[1120px]">
-          <h2 className="text-center font-serif text-5xl text-purple-900">Why choose us?</h2>
+          <h2 className="text-center font-serif text-5xl text-[#09637E]">Why choose us?</h2>
           <div className="mt-6 grid gap-3 md:grid-cols-3">
             {['End-to-end case handling', 'Transparent fixed pricing', 'Compliance team expertise'].map((x) => (
-              <article key={x} className="rounded-lg border border-purple-300 bg-purple-50 p-4">
-                <h3 className="text-sm font-semibold text-purple-900">{x}</h3>
-                <p className="mt-2 text-xs text-purple-700">Built for users facing complex PF delays and repeated claim rejection.</p>
+              <article key={x} className="rounded-lg border border-[#7AB2B2] bg-[#EBF4F6] p-4">
+                <h3 className="text-sm font-semibold text-[#09637E]">{x}</h3>
+                <p className="mt-2 text-xs text-[#088395]">Built for users facing complex PF delays and repeated claim rejection.</p>
               </article>
             ))}
           </div>
@@ -230,12 +230,12 @@ function HomePage({ onConnectClick }) {
         </div>
       </section>
 
-      <section className="bg-purple-50 py-14">
+      <section className="bg-[#EBF4F6] py-14">
         <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-8 lg:grid-cols-2">
           <div>
-            <p className="text-xs text-orange-600 font-semibold">REAL CASE STORY</p>
-            <h2 className="mt-2 font-serif text-5xl text-purple-900">
-              From 3 Rejections to <span className="italic text-orange-600">Full Settlement</span>
+            <p className="text-xs text-[#088395] font-semibold">REAL CASE STORY</p>
+            <h2 className="mt-2 font-serif text-5xl text-[#09637E]">
+              From 3 Rejections to <span className="italic text-[#088395]">Full Settlement</span>
             </h2>
             <p className="mt-3 text-sm text-slate-600">Case diagnosed, documents corrected, and final payout received with guided escalation support.</p>
           </div>
@@ -245,7 +245,7 @@ function HomePage({ onConnectClick }) {
 
       <section className="bg-white py-14">
         <div className="mx-auto w-[96vw] max-w-[1120px]">
-          <h2 className="text-center font-serif text-5xl text-purple-900">Nadal EPF In The News</h2>
+          <h2 className="text-center font-serif text-5xl text-[#09637E]">Nadal EPF In The News</h2>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
             {partners.map((_, idx) => (
               <img key={idx} src={companyLogoPlaceholder} alt="" className="h-8 w-16 object-contain" />
@@ -254,13 +254,13 @@ function HomePage({ onConnectClick }) {
         </div>
       </section>
 
-      <section className="bg-purple-50 py-14">
+      <section className="bg-[#EBF4F6] py-14">
         <div className="mx-auto w-[96vw] max-w-[1120px]">
-          <h2 className="text-center font-serif text-5xl text-purple-900">Frequently Asked Questions</h2>
+          <h2 className="text-center font-serif text-5xl text-[#09637E]">Frequently Asked Questions</h2>
           <div className="mx-auto mt-6 max-w-[860px] space-y-2">
             {faqItems.map((item) => (
-              <details key={item.q} className="rounded border border-purple-300 bg-white px-4 py-3">
-                <summary className="cursor-pointer text-sm font-medium text-purple-900">{item.q}</summary>
+              <details key={item.q} className="rounded border border-[#7AB2B2] bg-white px-4 py-3">
+                <summary className="cursor-pointer text-sm font-medium text-[#09637E]">{item.q}</summary>
                 <p className="mt-2 text-sm text-slate-600">{item.a}</p>
               </details>
             ))}

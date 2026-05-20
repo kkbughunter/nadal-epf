@@ -77,14 +77,14 @@ function App() {
 
       <FormModal isOpen={showFormModal} onClose={() => setShowFormModal(false)} />
 
-      <footer id="contact" className="bg-gray-100 text-gray-700">
+      <footer id="contact" className="bg-[#EBF4F6] text-gray-700">
         <div className="max-w-7xl mx-auto px-6 py-14">
           <div className="grid grid-cols-1 lg:grid-cols-12">
             <div className="lg:col-span-4 space-y-5">
               <div>
                 <h5 className="text-lg font-semibold mb-3">Registered Office</h5>
                 <div className="flex items-start gap-3 text-sm leading-7">
-                  <FaMapMarkerAlt className="mt-1 text-blue-400" />
+                  <FaMapMarkerAlt className="mt-1 text-[#088395]" />
                   <div>
                     <p>16/2, Mainroad, Tisaiyanvillai,</p>
                     <p>Tirunelveli, Tamil Nadu - 627 657, India</p>
@@ -95,7 +95,7 @@ function App() {
               <div>
                 <h5 className="text-lg font-semibold mb-3">Chennai Office</h5>
                 <div className="flex items-start gap-3 text-sm leading-7">
-                  <FaMapMarkerAlt className="mt-1 text-blue-400" />
+                  <FaMapMarkerAlt className="mt-1 text-[#088395]" />
                   <div>
                     <p>4/222, First Floor, East Coast Rd,</p>
                     <p>Palavakkam, Chennai, Tamil Nadu - 600 041</p>
@@ -107,11 +107,11 @@ function App() {
                 <h5 className="text-lg font-semibold mb-3">Contact Info</h5>
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center gap-3">
-                    <FaPhoneAlt className="text-blue-400" />
+                    <FaPhoneAlt className="text-[#088395]" />
                     <span>(+91) 63858 71009</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <FaEnvelope className="text-blue-400" />
+                    <FaEnvelope className="text-[#088395]" />
                     <span>info@nadalbusiness.com</span>
                   </div>
                 </div>
@@ -120,7 +120,7 @@ function App() {
               <div>
                 <h5 className="text-lg font-semibold mb-3">Working Hours</h5>
                 <div className="flex items-center gap-3 text-sm">
-                  <FaClock className="text-blue-400" />
+                  <FaClock className="text-[#088395]" />
                   <span>9.30 AM IST - 6.30 PM IST (Mon-Sat)</span>
                 </div>
               </div>
@@ -132,7 +132,7 @@ function App() {
                     href="https://web.whatsapp.com/send?phone=916385871009"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-10 h-10 rounded-full bg-green-500 text-white transition flex items-center justify-center"
+                    className="w-10 h-10 rounded-full bg-[#088395] text-white transition flex items-center justify-center hover:bg-[#09637E]"
                   >
                     <FaWhatsapp />
                   </a>
@@ -140,7 +140,7 @@ function App() {
                     href="https://www.linkedin.com/company/nadal-business-services/"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-10 h-10 rounded-full bg-blue-600 text-white transition flex items-center justify-center"
+                    className="w-10 h-10 rounded-full bg-[#088395] text-white transition flex items-center justify-center hover:bg-[#09637E]"
                   >
                     <FaLinkedinIn />
                   </a>
@@ -148,7 +148,7 @@ function App() {
                     href="https://www.facebook.com/Nadalbusiness"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-10 h-10 rounded-full bg-blue-800 text-white transition flex items-center justify-center"
+                    className="w-10 h-10 rounded-full bg-[#088395] text-white transition flex items-center justify-center hover:bg-[#09637E]"
                   >
                     <FaFacebookF />
                   </a>
@@ -156,7 +156,7 @@ function App() {
                     href="https://twitter.com/Nadalbusiness"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-10 h-10 rounded-full text-white bg-sky-500 transition flex items-center justify-center"
+                    className="w-10 h-10 rounded-full text-white bg-[#088395] transition flex items-center justify-center hover:bg-[#09637E]"
                   >
                     <FaTwitter />
                   </a>
@@ -164,7 +164,7 @@ function App() {
                     href="https://www.instagram.com/nadal_tisaiyanvillai_nellai/"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-10 h-10 rounded-full text-white bg-pink-600 transition flex items-center justify-center"
+                    className="w-10 h-10 rounded-full text-white bg-[#088395] transition flex items-center justify-center hover:bg-[#09637E]"
                   >
                     <FaInstagram />
                   </a>

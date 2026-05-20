@@ -25,7 +25,7 @@ const advisors = [
 function AboutPage() {
   return (
     <>
-      <section className="bg-[#f4f6f8] py-14">
+      <section className="bg-[#EBF4F6] py-14">
         <div className="mx-auto w-[92vw] max-w-[1120px] text-slate-800">
           <h1 className="text-4xl font-bold md:text-5xl">About Us</h1>
           <div className="mt-8 space-y-5 text-base leading-8 text-slate-700 md:text-lg">
@@ -87,7 +87,7 @@ function AboutPage() {
             </p>
             <p className="mt-6 text-base text-slate-700 md:text-lg">
               For any questions or feedback, feel free to reach out at{' '}
-              <a href="mailto:support@nadalbusiness.com" className="text-blue-600 underline">
+              <a href="mailto:support@nadalbusiness.com" className="text-[#088395] underline">
                 support@nadalbusiness.com
               </a>
             </p>
@@ -95,7 +95,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#f4f6f8] py-10">
+      <section className="bg-[#EBF4F6] py-10">
         <div className="mx-auto w-[92vw] max-w-[1120px]">
           <h2 className="text-center text-3xl font-bold text-slate-900 md:text-4xl">Meet Our Team</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -110,12 +110,12 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#f4f6f8] py-10">
+      <section className="bg-[#EBF4F6] py-10">
         <div className="mx-auto w-[92vw] max-w-[1120px]">
           <h2 className="text-center text-3xl font-bold text-slate-900 md:text-4xl">Backed by the Best</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {advisors.map((m) => (
-              <article key={m.name} className="rounded-xl border border-slate-200 bg-[#eaf4fb] p-5 shadow-sm">
+              <article key={m.name} className="rounded-xl border border-[#7AB2B2] bg-white p-5 shadow-sm">
                 <p className="text-right text-xs text-slate-500">{m.type}</p>
                 <img src={heroImage} alt="" className="mt-2 h-14 w-14 rounded-full object-cover" />
                 <h3 className="mt-4 text-xl font-semibold">{m.name}</h3>

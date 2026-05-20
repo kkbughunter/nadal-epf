@@ -46,88 +46,192 @@ const faqs = [
 function PFReportPage({ onBookConsultation }) {
   return (
     <>
-      <section className="bg-white py-12">
-        <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-10 lg:grid-cols-[1fr_360px]">
+      {/* HERO SECTION */}
+      <section className="bg-white py-14">
+        <div className="mx-auto grid w-[96vw] max-w-[1120px] items-center gap-10 lg:grid-cols-[1fr_380px]">
           <div>
-            <p className="text-xs text-slate-500">India's First AI Agent for tracking Provident Fund</p>
-            <h1 className="mt-2 text-5xl font-bold leading-[1.1] md:text-6xl">
-              Check if your <span className="text-blue-600">PF balance is stuck?</span>
+            <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+              India's First AI Agent for tracking Provident Fund
+            </p>
+
+            <h1 className="mt-4 text-5xl font-bold leading-[1.05] text-slate-900 md:text-6xl">
+              Check if your{' '}
+              <span className="text-[#088395]">PF balance is stuck</span>
             </h1>
-            <p className="mt-4 max-w-lg text-lg text-slate-700">1.3 Crore Indians could not withdraw their PF money in 2024</p>
-            <div className="mt-6">
+
+            <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600">
+              1.3 Crore Indians could not withdraw their PF money in 2024.
+              Detect hidden PF issues before your withdrawal gets rejected.
+            </p>
+
+            <div className="mt-8">
               <LeadForm light onBookConsultation={onBookConsultation} />
             </div>
           </div>
+
           <div className="flex justify-center">
-            <div className="rounded-[32px] border-4 border-slate-700 bg-white p-2 shadow-lg">
-              <img src={skyImage} alt="PF tracking app screen" className="h-[370px] w-[185px] rounded-[24px] object-cover" />
+            <div className="rounded-[34px] border-[6px] border-slate-800 bg-white p-2 shadow-2xl">
+              <img
+                src={skyImage}
+                alt="PF tracking app screen"
+                className="h-[400px] w-[200px] rounded-[26px] object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
+      {/* LOGOS */}
       <LogoMarquee />
 
-      <section className="bg-[#dcebf5] py-12">
-        <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-10 lg:grid-cols-2">
+      {/* REPORT SECTION */}
+      <section className="bg-[#EBF4F6] py-16">
+        <div className="mx-auto grid w-[96vw] max-w-[1120px] items-center gap-10 lg:grid-cols-2">
           <div>
-            <h2 className="text-5xl font-bold leading-tight">Get your own Provident Fund check-up report</h2>
-            <p className="mt-4 text-sm font-semibold text-slate-700">What will you get in the report:</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-700">
+            <p className="text-sm font-semibold uppercase tracking-wide text-[#088395]">
+              PF Health Report
+            </p>
+
+            <h2 className="mt-3 text-5xl font-bold leading-tight text-slate-900">
+              Get your own Provident Fund check-up report
+            </h2>
+
+            <p className="mt-5 text-slate-600">
+              Our AI-powered PF analysis detects hidden issues that may prevent
+              your PF withdrawal in the future.
+            </p>
+
+            <ul className="mt-6 space-y-4">
               {reportPoints.map((point) => (
-                <li key={point}>✅ {point}</li>
+                <li
+                  key={point}
+                  className="flex items-start gap-3 rounded-xl bg-white p-4 shadow-sm"
+                >
+                  <span className="mt-1 text-[#088395]">✔</span>
+                  <span className="text-sm text-slate-700">{point}</span>
+                </li>
               ))}
             </ul>
           </div>
+
           <div className="flex items-center justify-center lg:justify-end">
-            <LeadForm light onBookConsultation={onBookConsultation} />
-          </div>
-        <div className="mx-auto w-[96vw] max-w-[1120px]">
-          <h2 className="text-5xl font-bold">Who should check their PF?</h2>
-          <p className="mt-3 text-slate-600">Your PF amount may not be withdrawable if your profile matches these conditions</p>
-          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {checkCards.map((card) => (
-              <article key={card.title} className="rounded-md border border-slate-200 bg-white p-4 shadow-sm">
-                <p className="text-[10px] font-bold tracking-wide text-blue-700">{card.tag}</p>
-                <h3 className="mt-3 text-xl font-semibold leading-snug">{card.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{card.text}</p>
-              </article>
-            ))}
-          </div>
-          <div className="mt-10 flex justify-center">
             <LeadForm light onBookConsultation={onBookConsultation} />
           </div>
         </div>
       </section>
 
-      <section className="bg-purple-900 py-12 text-white">
-        <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-5 lg:grid-cols-3">
-          <article className="rounded-md bg-white p-5 text-purple-900">
-            <h3 className="text-3xl font-bold">Why check your PF account?</h3>
-            <p className="mt-3 text-sm leading-6 text-slate-700">
-              PF is a major retirement fund, yet many employees face difficulties in withdrawal due to hidden issues.
+      {/* WHO SHOULD CHECK */}
+      <section className="bg-white py-16">
+        <div className="mx-auto w-[96vw] max-w-[1120px]">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-wide text-[#088395]">
+              Eligibility Check
+            </p>
+
+            <h2 className="mt-3 text-5xl font-bold leading-tight text-slate-900">
+              Who should check their PF?
+            </h2>
+
+            <p className="mt-4 text-lg text-slate-600">
+              Your PF amount may not be withdrawable if your profile matches
+              these conditions.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {checkCards.map((card) => (
+              <article
+                key={card.title}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <p className="text-[11px] font-bold uppercase tracking-wider text-[#088395]">
+                  {card.tag}
+                </p>
+
+                <h3 className="mt-4 text-2xl font-bold leading-snug text-slate-900">
+                  {card.title}
+                </h3>
+
+                <p className="mt-4 text-sm leading-7 text-slate-600">
+                  {card.text}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <LeadForm light onBookConsultation={onBookConsultation} />
+          </div>
+        </div>
+      </section>
+
+      {/* WHY PF GETS STUCK */}
+      <section className="bg-[#09637E] py-16 text-white">
+        <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-6 lg:grid-cols-3">
+          <article className="rounded-2xl bg-white p-6 text-slate-900 shadow-lg">
+            <h3 className="text-3xl font-bold leading-tight">
+              Why check your PF account?
+            </h3>
+
+            <p className="mt-4 text-sm leading-7 text-slate-600">
+              PF is one of the biggest retirement savings assets for employees,
+              yet many people face withdrawal rejection because of hidden account
+              issues.
             </p>
           </article>
-          <article className="rounded-md bg-white p-5 text-purple-900">
-            <h3 className="text-3xl font-bold">Why your PF can get stuck?</h3>
-            <ul className="mt-3 space-y-2 text-sm text-slate-700">
+
+          <article className="rounded-2xl bg-white p-6 text-slate-900 shadow-lg">
+            <h3 className="text-3xl font-bold leading-tight">
+              Why your PF can get stuck?
+            </h3>
+
+            <ul className="mt-5 space-y-3 text-sm text-slate-600">
               <li>❌ Incorrect employer contributions</li>
-              <li>❌ Delayed PF deposit</li>
-              <li>❌ Mismatch in salary reporting</li>
+              <li>❌ Delayed PF deposits</li>
+              <li>❌ Salary mismatch reporting</li>
+              <li>❌ Unmerged UAN accounts</li>
               <li>❌ Inactive PF accounts</li>
             </ul>
           </article>
+
           <div className="flex items-center justify-center lg:justify-end">
             <LeadForm onBookConsultation={onBookConsultation} />
           </div>
-        <div className="mx-auto w-[96vw] max-w-[1120px]">
-          <h2 className="text-5xl font-bold text-purple-900">Frequently asked questions</h2>
-          <div className="mt-6 space-y-2">
+        </div>
+      </section>
+
+      {/* FAQ SECTION */}
+      <section className="bg-[#EBF4F6] py-16">
+        <div className="mx-auto w-[96vw] max-w-[900px]">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-[#088395]">
+              FAQs
+            </p>
+
+            <h2 className="mt-3 text-5xl font-bold text-slate-900">
+              Frequently asked questions
+            </h2>
+          </div>
+
+          <div className="mt-10 space-y-4">
             {faqs.map((q) => (
-              <details key={q} className="rounded border border-slate-300 bg-white px-4 py-3">
-                <summary className="cursor-pointer text-sm font-medium text-slate-800">{q}</summary>
-                <p className="mt-2 text-sm text-slate-600">
-                  Our expert report checks this with your account-specific risk signals and recommended next actions.
+              <details
+                key={q}
+                className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+              >
+                <summary className="cursor-pointer list-none text-base font-semibold text-slate-800">
+                  <div className="flex items-center justify-between gap-4">
+                    {q}
+                    <span className="text-xl transition group-open:rotate-45">
+                      +
+                    </span>
+                  </div>
+                </summary>
+
+                <p className="mt-4 text-sm leading-7 text-slate-600">
+                  Our expert PF analysis report checks your account-specific
+                  risk signals, identifies possible withdrawal issues, and
+                  recommends the next steps to resolve them.
                 </p>
               </details>
             ))}
@@ -135,17 +239,49 @@ function PFReportPage({ onBookConsultation }) {
         </div>
       </section>
 
-      <section className="bg-white py-14">
-        <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-8 lg:grid-cols-2">
-          <div className="flex items-center justify-center text-center">
-            <div>
-              <p className="italic text-slate-700">
-                "Your PF could be stuck, and you wouldn't even know. Get your PF account checked and avoid the hassle later."
+      {/* FOUNDER QUOTE */}
+      <section className="bg-white py-20">
+        <div className="mx-auto grid w-[96vw] max-w-[1120px] items-center gap-10 lg:grid-cols-2">
+          <div className="rounded-3xl bg-slate-100 p-10 text-center">
+            <p className="text-2xl italic leading-10 text-slate-700">
+              "Your PF could be stuck, and you wouldn't even know. Get your PF
+              account checked early and avoid future withdrawal hassles."
+            </p>
+
+            <div className="mt-8">
+              <p className="text-lg font-bold text-slate-900">
+                Amey Kanekar
               </p>
-              <p className="mt-6 font-semibold">Amey Kanekar</p>
+
               <p className="text-slate-600">Co-Founder, NadlaEPF</p>
             </div>
           </div>
+
           <div className="flex justify-center lg:justify-end">
             <LeadForm light onBookConsultation={onBookConsultation} />
           </div>
+        </div>
+      </section>
+
+      {/* CTA FOOTER */}
+      <section className="bg-[#088395] py-16 text-white">
+        <div className="mx-auto flex w-[96vw] max-w-[900px] flex-col items-center text-center">
+          <h2 className="text-5xl font-bold leading-tight">
+            Don’t wait until your PF withdrawal gets rejected
+          </h2>
+
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-[#EBF4F6]">
+            Get a detailed PF health check report and identify hidden issues
+            before it’s too late.
+          </p>
+
+          <div className="mt-10 w-full max-w-md">
+            <LeadForm onBookConsultation={onBookConsultation} />
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default PFReportPage

@@ -95,9 +95,9 @@ function FAQPage() {
   }, [activeCategory, query])
 
   return (
-    <section className="bg-purple-50 py-14">
+    <section className="bg-[#EBF4F6] py-14">
       <div className="mx-auto w-[92vw] max-w-[1120px]">
-        <h1 className="text-center text-3xl font-bold text-purple-900 md:text-4xl">Frequently Asked Questions</h1>
+        <h1 className="text-center text-3xl font-bold text-[#09637E] md:text-4xl">Frequently Asked Questions</h1>
         <p className="mt-4 text-center text-base text-slate-500 md:text-lg">
           Find answers to common questions about PF withdrawal, transfers, and more.
         </p>
@@ -112,15 +112,15 @@ function FAQPage() {
         </div>
 
         <div className="mt-8 grid gap-6 lg:grid-cols-[260px_1fr]">
-          <aside className="rounded-xl border border-purple-300 bg-purple-50 p-4">
-            <h2 className="text-lg font-semibold text-purple-900">Categories</h2>
+          <aside className="rounded-xl border border-[#7AB2B2] bg-white p-4">
+            <h2 className="text-lg font-semibold text-[#09637E]">Categories</h2>
             <div className="mt-4 space-y-2">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
                   className={`w-full rounded-md px-3 py-2 text-left text-sm md:text-base ${
-                    activeCategory === cat ? 'bg-orange-200 text-orange-900' : 'text-slate-600 hover:bg-purple-100'
+                    activeCategory === cat ? 'bg-[#7AB2B2]/30 text-[#09637E]' : 'text-slate-600 hover:bg-[#EBF4F6]'
                   }`}
                 >
                   {cat}
@@ -131,13 +131,13 @@ function FAQPage() {
 
           <div className="space-y-3">
             {filteredFaqs.map((item) => (
-              <details key={item.q} className="rounded-xl border border-purple-300 bg-white px-5 py-4">
-                <summary className="cursor-pointer text-base font-semibold text-purple-900 md:text-lg">{item.q}</summary>
+              <details key={item.q} className="rounded-xl border border-[#7AB2B2] bg-white px-5 py-4">
+                <summary className="cursor-pointer text-base font-semibold text-[#09637E] md:text-lg">{item.q}</summary>
                 <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">{item.a}</p>
               </details>
             ))}
             {filteredFaqs.length === 0 && (
-              <div className="rounded-xl border border-purple-300 bg-white px-5 py-6 text-sm text-slate-500 md:text-base">
+              <div className="rounded-xl border border-[#7AB2B2] bg-white px-5 py-6 text-sm text-slate-500 md:text-base">
                 No questions found for this search/category.
               </div>
             )}

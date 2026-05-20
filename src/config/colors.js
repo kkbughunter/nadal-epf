@@ -2,31 +2,38 @@
 // Change colors here and they'll update everywhere in the app
 
 export const colors = {
+  palette: {
+    deep: '#09637E',
+    primary: '#088395',
+    muted: '#7AB2B2',
+    pale: '#EBF4F6',
+  },
+
   // Primary Colors
   primary: {
-    dark: 'bg-purple-900',
-    light: 'bg-purple-50',
-    text: 'text-purple-900',
-    border: 'border-purple-300',
-    hover: 'hover:bg-purple-800',
+    dark: 'bg-[#09637E]',
+    light: 'bg-[#EBF4F6]',
+    text: 'text-[#09637E]',
+    border: 'border-[#7AB2B2]',
+    hover: 'hover:bg-[#088395]',
   },
 
   // Accent Colors
   accent: {
-    main: 'bg-orange-600',
-    hover: 'hover:bg-orange-700',
-    text: 'text-orange-600',
-    light: 'bg-orange-200',
-    lightText: 'text-orange-300',
-    lightBorder: 'text-orange-400',
+    main: 'bg-[#088395]',
+    hover: 'hover:bg-[#09637E]',
+    text: 'text-[#088395]',
+    light: 'bg-[#7AB2B2]/25',
+    lightText: 'text-[#EBF4F6]',
+    lightBorder: 'text-[#7AB2B2]',
   },
 
   // Header
   header: {
-    bg: 'bg-purple-900',
+    bg: 'bg-[#09637E]',
     text: 'text-white',
-    activeLink: 'text-orange-400',
-    hoverLink: 'hover:text-orange-300',
+    activeLink: 'text-[#EBF4F6]',
+    hoverLink: 'hover:text-[#7AB2B2]',
   },
 
   // Text Colors
@@ -42,54 +49,54 @@ export const colors = {
   border: {
     light: 'border-slate-200',
     medium: 'border-slate-300',
-    primary: 'border-purple-300',
+    primary: 'border-[#7AB2B2]',
   },
 
   // Background Colors
   bg: {
-    page: 'bg-purple-50',
+    page: 'bg-[#EBF4F6]',
     card: 'bg-white',
     section: 'bg-white',
-    sectionAlt: 'bg-purple-50',
+    sectionAlt: 'bg-[#EBF4F6]',
     modal: 'bg-black/50',
   },
 
   // Form Colors
   form: {
     inputBg: 'bg-white',
-    inputBorder: 'border-purple-300',
-    inputFocus: 'focus:border-orange-500 focus:ring-1 focus:ring-orange-500',
-    labelText: 'text-purple-900',
-    buttonPrimary: 'bg-orange-600 hover:bg-orange-700',
+    inputBorder: 'border-[#7AB2B2]',
+    inputFocus: 'focus:border-[#088395] focus:ring-1 focus:ring-[#088395]',
+    labelText: 'text-[#09637E]',
+    buttonPrimary: 'bg-[#088395] hover:bg-[#09637E]',
   },
 
   // Button Colors
   button: {
-    primary: 'bg-orange-600 text-white hover:bg-orange-700',
-    secondary: 'border-purple-300 bg-white text-purple-700 hover:bg-purple-50',
-    dark: 'bg-purple-900 text-white hover:bg-purple-800',
+    primary: 'bg-[#088395] text-white hover:bg-[#09637E]',
+    secondary: 'border-[#7AB2B2] bg-white text-[#09637E] hover:bg-[#EBF4F6]',
+    dark: 'bg-[#09637E] text-white hover:bg-[#088395]',
   },
 
   // Modal Colors
   modal: {
     bg: 'bg-white',
-    headerBg: 'bg-purple-50',
-    headerText: 'text-purple-900',
-    headerBorder: 'border-purple-200',
-    closeBtn: 'text-purple-600 hover:text-purple-800',
+    headerBg: 'bg-[#EBF4F6]',
+    headerText: 'text-[#09637E]',
+    headerBorder: 'border-[#7AB2B2]',
+    closeBtn: 'text-[#088395] hover:text-[#09637E]',
   },
 
   // Category/Tags
   category: {
-    activeBg: 'bg-orange-200',
-    activeText: 'text-orange-900',
-    inactiveBg: 'hover:bg-purple-100',
+    activeBg: 'bg-[#7AB2B2]/30',
+    activeText: 'text-[#09637E]',
+    inactiveBg: 'hover:bg-[#EBF4F6]',
     inactiveText: 'text-slate-600',
   },
 
   // Gradients
   gradient: {
-    hero: 'bg-[linear-gradient(160deg,#4a2c5e,#6b3d7f)]',
+    hero: 'bg-[linear-gradient(160deg,#09637E,#088395)]',
   },
 
   // Shadow

@@ -36,7 +36,7 @@ function ContactPage({ onConnectClick }) {
               We&apos;re listening! Your concerns are of paramount importance to us. To make this process swift and seamless, we have designed a 3-level
               query resolution and grievance redressal process to help resolve your queries efficiently.
             </p>
-            <a href="#0" className="mt-3 inline-block text-blue-600">
+            <a href="#0" className="mt-3 inline-block text-[#088395]">
               Raise Escalation
             </a>
           </div>
@@ -53,7 +53,7 @@ function ContactPage({ onConnectClick }) {
 
           <div>
             <p className="text-3xl font-semibold">
-              Reach out to us: <span className="font-normal text-blue-600">+91 63858 71009</span>
+              Reach out to us: <span className="font-normal text-[#088395]">+91 63858 71009</span>
             </p>
             <p className="mt-2 text-base text-slate-600">
               Note: This number will only be available Monday to Friday, 10 AM to 7 PM IST.
