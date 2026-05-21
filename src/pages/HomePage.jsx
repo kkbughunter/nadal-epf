@@ -3,6 +3,7 @@ import heroImage from '../assets/image-placeholder3.png'
 import skyImage from '../assets/image-placeholder2.png'
 import sunsetImage from '../assets/image-placeholder1.png'
 import LogoMarquee from '../components/LogoMarquee'
+import { FaUserShield, FaBolt, FaWallet } from 'react-icons/fa'
 
 import comp1 from '../assets/company-logos/comp1.png'
 import comp2 from '../assets/company-logos/comp2.png'
@@ -36,23 +37,58 @@ const issueCards = [
   'Incorrect service history',
   'Exit not marked by company',
 ]
-const solutionCards = ['PF Withdrawal', 'PF Transfer & Merge', 'EPF KYC Resolve']
-const faqItems = [
+import {
+  FaFileInvoiceDollar,
+  FaExchangeAlt,
+  FaUserCheck,
+  FaGlobe,
+  FaCheckCircle,
+} from 'react-icons/fa'
+
+const solutionCards = [
   {
-    q: 'PF Withdrawal',
-    a: 'We verify KYC, service history, and claim category before filing. This reduces rejection risk and speeds up settlement.',
+    title: 'PF Withdrawal Assistance',
+    icon: <FaFileInvoiceDollar className="text-2xl text-[#09637E]" />,
+    desc:
+      'From filing to settlement, we handle your entire PF withdrawal — rejections included.',
+    points: [
+      'Full & partial withdrawal',
+      'Rejected claim resubmission',
+      'Maximum PF withdrawal',
+    ],
   },
   {
-    q: 'KYC Details',
-    a: 'Name, DOB, Aadhaar, PAN, and bank details must match EPFO records. We identify mismatches and provide the correction flow.',
+    title: 'PF Transfer & Merger',
+    icon: <FaExchangeAlt className="text-2xl text-[#09637E]" />,
+    desc:
+      'We trace, merge, and consolidate all your PF accounts across employers. One account. Zero hassle.',
+    points: [
+      'Multi-UAN consolidation',
+      'Old account tracing',
+      'Inter-employer transfers',
+    ],
   },
   {
-    q: 'Transfer Mapping',
-    a: 'If old PF balances are not merged, withdrawal may fail. We assist with transfer tracking and unresolved passbook entries.',
+    title: 'KYC & Record Correction',
+    icon: <FaUserCheck className="text-2xl text-[#09637E]" />,
+    desc:
+      'Resolve KYC issues, joint declarations, and e-nominations. Name, DOB, Aadhaar — we fix it all.',
+    points: [
+      'Name & DOB correction',
+      'Aadhaar-UAN linking',
+      'EPS record correction',
+    ],
   },
   {
-    q: 'UAN & KYC',
-    a: 'If you do not remember your UAN or have linked-mobile issues, we guide recovery and account activation steps.',
+    title: 'NRI PF Withdrawal',
+    icon: <FaGlobe className="text-2xl text-[#09637E]" />,
+    desc:
+      "Living abroad and can't visit India? We handle your entire PF withdrawal remotely — no India visit required.",
+    points: [
+      'Fully remote process',
+      'International bank transfer',
+      'Tax guidance (TDS)',
+    ],
   },
 ]
 
@@ -97,10 +133,27 @@ function HomePage({ onConnectClick }) {
               Withdraw Your EPF
               <span className="block italic text-[#EBF4F6]">Money Easily.</span>
             </h1>
-            <div className="mt-5 grid max-w-md grid-cols-3 gap-3 text-[11px] text-[#EBF4F6]">
-              <div>Lead by Trusted Experts</div>
-              <div>Quick TAT</div>
-              <div>Maximum PF Gains</div>
+            <div className="mt-6 flex max-w-lg items-center gap-6 text-[#EBF4F6]">
+              <div className="flex items-center gap-2">
+                <FaUserShield className="text-sm text-white" />
+                <span className="text-[11px] font-medium">
+                  Lead by Trusted Experts
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <FaBolt className="text-sm text-white" />
+                <span className="text-[11px] font-medium">
+                  Quick TAT
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <FaWallet className="text-sm text-white" />
+                <span className="text-[11px] font-medium">
+                  Maximum PF Gains
+                </span>
+              </div>
             </div>
             <button onClick={onConnectClick} className="mt-6 rounded-md bg-white px-5 py-2 text-xs font-bold text-[#09637E] hover:bg-[#EBF4F6] cursor-pointer">Connect Now</button>
             <p className="mt-2 text-xs text-[#EBF4F6]">Rs4,00,000+ Claim Resolved</p>
@@ -171,16 +224,16 @@ function HomePage({ onConnectClick }) {
           <div className="mt-4">
             <LogoMarquee />
           </div>
-                  <div className="mx-auto w-[96vw] max-w-[1120px]">
+          <div className="mx-auto w-[96vw] max-w-[1120px]">
 
-          <div className="mt-4 grid gap-3 md:grid-cols-4">
-            {statCards.map((stat) => (
-              <article key={stat.label} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-                <StatNumber value={stat.value} suffix={stat.suffix} />
-                <p className="text-xs text-slate-500">{stat.label}</p>
-              </article>
-            ))}
-          </div>
+            <div className="mt-4 grid gap-3 md:grid-cols-4">
+              {statCards.map((stat) => (
+                <article key={stat.label} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+                  <StatNumber value={stat.value} suffix={stat.suffix} />
+                  <p className="text-xs text-slate-500">{stat.label}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -235,16 +288,53 @@ function HomePage({ onConnectClick }) {
 
       <section className="bg-[#EBF4F6] py-14">
         <div className="mx-auto w-[96vw] max-w-[1120px]">
-          <h2 className="text-center font-serif text-5xl">Every PF Problem. One Expert Solution.</h2>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {solutionCards.map((x) => (
-              <article key={x} className="rounded-lg border border-[#7AB2B2] bg-white p-4 shadow-sm">
-                <h3 className="text-lg font-semibold text-[#09637E]">{x}</h3>
-                <ul className="mt-3 list-disc space-y-1 pl-4 text-xs text-slate-600">
-                  <li>Structured case diagnostics</li>
-                  <li>Dedicated expert guidance</li>
-                  <li>Escalation support if needed</li>
-                </ul>
+          <div className="text-center">
+            <h2 className="font-serif text-4xl text-[#09637E] md:text-5xl">
+              Every PF Problem One Expert Solution.
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600">
+              End-to-end EPF support for withdrawals, transfers,
+              KYC corrections, rejected claims, and NRI settlements.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {solutionCards.map((item) => (
+              <article
+                key={item.title}
+                className="rounded-2xl border border-[#7AB2B2] bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                {/* Icon */}
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EBF4F6]">
+                  {item.icon}
+                </div>
+
+                {/* Title */}
+                <h3 className="mt-4 text-lg font-bold leading-snug text-[#09637E]">
+                  {item.title}
+                </h3>
+
+                {/* Description */}
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {item.desc}
+                </p>
+
+                {/* Features */}
+                <div className="mt-5 space-y-2">
+                  {item.points.map((point) => (
+                    <div
+                      key={point}
+                      className="flex items-start gap-2 rounded-lg bg-[#F8FBFB] px-3 py-2"
+                    >
+                      <FaCheckCircle className="mt-0.5 shrink-0 text-sm text-[#088395]" />
+
+                      <span className="text-xs font-medium leading-5 text-slate-700">
+                        {point}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </article>
             ))}
           </div>
