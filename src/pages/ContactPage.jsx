@@ -12,10 +12,8 @@ function ContactPage({ onConnectClick }) {
         <div className="mt-6 space-y-6 text-[18px] leading-8">
           <div>
             <h2 className="text-3xl font-semibold">Address</h2>
-            <p className="mt-2">4/222, First Floor, </p>
-            <p>East Coast Rd,</p>
-            <p>Palavakkam, </p>
-            <p>Chennai, Tamil Nadu - 600 041</p>
+            <p className="mt-2">4/222, First Floor, East Coast Rd,</p>
+            <p>Palavakkam, Chennai, Tamil Nadu - 600 041</p>
           </div>
 
           <div>
