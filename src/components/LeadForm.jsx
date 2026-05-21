@@ -10,7 +10,7 @@ function LeadForm({ light, onBookConsultation }) {
   return (
     
     <div className={cn('w-full max-w-[360px] rounded-lg border p-4', light ? `border-slate-200 ${colors.bg.card}` : `${colors.border.primary} ${colors.primary.dark}`)}>
-    <p className={cn('mt-2 text-[10px]', light ? colors.text.lighter : colors.primary.light)}>
+    <p className={cn('mt-2 text-[10px]',)}>
         Please enter WhatsApp linked mobile number
       </p>
       {/* <p className={cn('mb-2 text-[11px]', light ? colors.text.light : `${colors.primary.light}`)}>
@@ -29,7 +29,7 @@ function LeadForm({ light, onBookConsultation }) {
       </p> */}
       <button
         onClick={handleClick}
-        className={cn('mt-3 w-full rounded-full py-3 text-xs font-bold transition', colors.accent.main, colors.accent.hover, 'text-white')}
+        className={cn('mt-3 w-full rounded-full py-3 text-xs font-bold transition cursor-pointer', colors.accent.main, colors.accent.hover, 'text-white')}
       >
         Book Free Consultation →
       </button>

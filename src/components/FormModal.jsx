@@ -44,7 +44,7 @@ function FormModal({ isOpen, onClose }) {
           <h2 className={cn('text-xl font-bold', colors.modal.headerText)}>Book Free Consultation</h2>
           <button
             onClick={onClose}
-            className={colors.modal.closeBtn}
+            className={cn('cursor-pointer'), colors.modal.closeBtn}
           >
             <FaTimes size={20} />
           </button>
@@ -149,13 +149,13 @@ function FormModal({ isOpen, onClose }) {
             <button
               type="button"
               onClick={onClose}
-              className={cn('flex-1 rounded-md border px-4 py-2 text-sm font-medium', colors.button.secondary)}
+              className={cn('flex-1 rounded-md border px-4 py-2 text-sm font-medium cursor-pointer', colors.button.secondary)}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className={cn('flex-1 rounded-md px-4 py-2 text-sm font-medium text-white', colors.button.primary)}
+              className={cn('flex-1 rounded-md px-4 py-2 text-sm font-medium text-white cursor-pointer', colors.button.primary)}
             >
               Submit
             </button>

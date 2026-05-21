@@ -86,7 +86,7 @@ function HomePage({ onConnectClick }) {
               <div>Quick TAT</div>
               <div>Maximum PF Gains</div>
             </div>
-            <button onClick={onConnectClick} className="mt-6 rounded-md bg-white px-5 py-2 text-xs font-bold text-[#09637E] hover:bg-[#EBF4F6]">Connect Now</button>
+            <button onClick={onConnectClick} className="mt-6 rounded-md bg-white px-5 py-2 text-xs font-bold text-[#09637E] hover:bg-[#EBF4F6] cursor-pointer">Connect Now</button>
             <p className="mt-2 text-xs text-[#EBF4F6]">Rs4,00,000+ Claim Resolved</p>
           </div>
           <aside className="rounded-2xl bg-white p-4 shadow-2xl shadow-black/30">
@@ -162,7 +162,7 @@ function HomePage({ onConnectClick }) {
             ))}
           </div>
           <div className="mt-6 flex justify-center">
-            <button onClick={onConnectClick} className="rounded-md bg-[#09637E] px-5 py-2 text-xs font-semibold text-white hover:bg-[#088395]">Connect Now</button>
+            <button onClick={onConnectClick} className="rounded-md bg-[#09637E] px-5 py-2 text-xs font-semibold text-white hover:bg-[#088395] cursor-pointer">Connect Now</button>
           </div>
         </div>
       </section>

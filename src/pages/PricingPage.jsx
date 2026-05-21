@@ -140,7 +140,7 @@ function PricingPage() {
           <h2 className="text-3xl font-bold">Want to know the exact fee?</h2>
           <p className="mt-2 text-slate-600">Book a free consultation call and get a detailed PF audit powered by expert AI.</p>
           <button className="mt-5 rounded bg-[#088395] px-4 py-2 text-sm font-semibold text-white hover:bg-[#09637E]">Book Free Consultation</button>
-          <p className="mt-2 text-xs text-[#088395]">Expert slots available today</p>
+          {/* <p className="mt-2 text-xs text-[#088395]">Expert slots available today</p> */}
         </div>
       </section>
 

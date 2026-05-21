@@ -9,15 +9,15 @@ import FAQPage from './pages/FAQPage'
 import FormModal from './components/FormModal'
 import { colors, cn } from './config/colors'
 import {
-    FaMapMarkerAlt,
-    FaPhoneAlt,
-    FaEnvelope,
-    FaClock,
-    FaLinkedinIn,
-    FaFacebookF,
-    FaTwitter,
-    FaInstagram,
-    FaWhatsapp,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaClock,
+  FaLinkedinIn,
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaWhatsapp,
 } from 'react-icons/fa';
 
 function App() {
@@ -31,28 +31,81 @@ function App() {
 
   return (
     <div className={cn(colors.bg.page, colors.text.primary)}>
-      <header className={cn('fixed inset-x-0 top-0 z-50 border-b border-white/10', colors.header.bg)}>
-        <div className="mx-auto flex h-12 w-[96vw] max-w-[1120px] items-center justify-between">
-          <button onClick={() => handlePageChange('home')} className="hover:opacity-80 transition-opacity">
-            <img src={logo} alt="nadal EPF logo" className="h-6 w-auto" />
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
+        <div className="mx-auto flex h-26 w-[96vw] max-w-[1120px] items-center justify-between">
+
+          <button
+            onClick={() => handlePageChange('home')}
+            className="transition-opacity hover:opacity-80"
+          >
+            <img src={logo} alt="nadal EPF logo" className="h-15 w-auto cursor-pointer " />
           </button>
-          <nav className={cn('hidden items-center gap-6 text-sm lg:flex', colors.header.text)}>
-            <button onClick={() => handlePageChange('home')} className={page === 'home' ? colors.header.activeLink : colors.header.hoverLink}>
-              Home
+
+          <nav className="hidden items-center gap-6 text-sm lg:flex">
+
+            <button
+              onClick={() => handlePageChange('home')}
+              className={
+                page === 'home'
+                  ? 'text-lg font-bold text-black underline underline-offset-4'
+                  : 'text-lg text-gray-700 transition-colors hover:text-black'
+              }
+            >
+              HOME
             </button>
-            <button onClick={() => handlePageChange('pf-report')} className={page === 'pf-report' ? colors.header.activeLink : colors.header.hoverLink}>
-              PF Report
+
+            <button
+              onClick={() => handlePageChange('pf-report')}
+              className={
+                page === 'pf-report'
+                  ? 'text-lg font-bold text-black underline underline-offset-4'
+                  : 'text-lg text-gray-700 transition-colors hover:text-black'
+              }
+            >
+              PF REPORT
             </button>
-            <button onClick={() => handlePageChange('pricing')} className={page === 'pricing' ? colors.header.activeLink : colors.header.hoverLink}>
-              Pricing
+
+            <button
+              onClick={() => handlePageChange('pricing')}
+              className={
+                page === 'pricing'
+                  ? 'font-bold text-black underline underline-offset-4'
+                  : 'text-gray-700 transition-colors hover:text-black'
+              }
+            >
+              PRICING
             </button>
-            <button onClick={() => handlePageChange('about')} className={page === 'about' ? colors.header.activeLink : colors.header.hoverLink}>
-              About Us
+
+            <button
+              onClick={() => handlePageChange('about')}
+              className={
+                page === 'about'
+                  ? 'font-bold text-black underline underline-offset-4'
+                  : 'text-gray-700 transition-colors hover:text-black'
+              }
+            >
+              ABOUT US
             </button>
-            <button onClick={() => handlePageChange('contact')} className={page === 'contact' ? colors.header.activeLink : colors.header.hoverLink}>
-              Contact Us
+
+            <button
+              onClick={() => handlePageChange('contact')}
+              className={
+                page === 'contact'
+                  ? 'font-bold text-black underline underline-offset-4'
+                  : 'text-gray-700 transition-colors hover:text-black'
+              }
+            >
+              CONTACT US
             </button>
-            <button onClick={() => handlePageChange('faq')} className={page === 'faq' ? colors.header.activeLink : colors.header.hoverLink}>
+
+            <button
+              onClick={() => handlePageChange('faq')}
+              className={
+                page === 'FAQ'
+                  ? 'font-bold text-black underline underline-offset-4'
+                  : 'text-gray-700 transition-colors hover:text-black'
+              }
+            >
               FAQ
             </button>
           </nav>
