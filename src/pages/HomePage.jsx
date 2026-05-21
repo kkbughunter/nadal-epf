@@ -301,19 +301,7 @@ function HomePage({ onConnectClick }) {
         </div>
       </section>
 
-      {/* <section className="bg-[#EBF4F6] py-14">
-        <div className="mx-auto w-[96vw] max-w-[1120px]">
-          <h2 className="text-center font-serif text-5xl text-[#09637E]">Frequently Asked Questions</h2>
-          <div className="mx-auto mt-6 max-w-[860px] space-y-2">
-            {faqItems.map((item) => (
-              <details key={item.q} className="rounded border border-[#7AB2B2] bg-white px-4 py-3">
-                <summary className="cursor-pointer text-sm font-medium text-[#09637E]">{item.q}</summary>
-                <p className="mt-2 text-sm text-slate-600">{item.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section> */}
+      
     </>
   )
 }

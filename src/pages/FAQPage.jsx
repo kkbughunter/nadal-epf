@@ -1,98 +1,78 @@
 import { useMemo, useState } from 'react'
 
-// const categories = [
-//   'All',
-//   'EPF withdrawal',
-//   'EPF Transfer',
-//   'Joint Declaration and KYC',
-//   'EPFO Rules',
-//   'Finright PF Consultant',
-// ]
 
 const faqData = [
   {
-    q: 'How can I raise a claim for PF withdrawal online?',
-    a: 'Log in to the EPFO member portal, complete KYC, select claim type, and submit Form 19/10C as applicable.',
-    cat: 'EPF withdrawal',
-  },
-  {
-    q: 'Can I withdraw 100% of my PF amount?',
-    a: 'Yes, usually after retirement or 2 months of unemployment, subject to EPFO rules and account status.',
-    cat: 'EPF withdrawal',
-  },
-  {
-    q: 'How long does it take to receive PF withdrawal after applying?',
-    a: 'Most clean claims are processed within a few working days, but mismatches may extend timelines.',
-    cat: 'EPFO Rules',
-  },
-  {
-    q: 'Do I need employer approval for online PF withdrawal?',
-    a: 'In many cases no manual approval is needed, but employer records and exit details must be correct.',
-    cat: 'EPFO Rules',
-  },
-  {
-    q: 'What documents are required for PF withdrawal?',
-    a: 'Typically Aadhaar, PAN, bank account details, and accurate service/exit details in EPFO records.',
-    cat: 'Joint Declaration and KYC',
-  },
-  {
-    q: 'What is the waiting period for PF withdrawal after resignation?',
-    a: 'Final settlement often requires around 2 months of unemployment, depending on claim type and EPFO policy.',
-    cat: 'EPFO Rules',
-  },
-  {
-    q: 'Can I withdraw PF while still employed?',
-    a: 'Partial withdrawal may be allowed for specific reasons like medical, home loan, or education under EPFO rules.',
-    cat: 'EPF withdrawal',
-  },
-  {
-    q: 'How to check PF withdrawal status online?',
-    a: 'Use the EPFO claim status section on the member portal or UMANG app with your UAN credentials.',
-    cat: 'EPFO Rules',
-  },
-  {
-    q: 'Can NRIs withdraw their PF amount online?',
-    a: 'Yes, NRIs can apply subject to KYC correctness, bank details, and tax/compliance requirements.',
-    cat: 'EPF withdrawal',
-  },
-  {
-    q: 'Are PF withdrawals taxable for NRIs?',
-    a: 'Taxation depends on service period, treaty rules, and withdrawal conditions. Professional advice is recommended.',
-    cat: 'EPFO Rules',
-  },
-  {
-    q: 'Which bank account should NRIs use for PF withdrawal?',
-    a: 'Use a valid account mapped in EPFO records and ensure KYC details match exactly to avoid rejection.',
-    cat: 'Joint Declaration and KYC',
-  },
-  {
-    q: 'What is Form 13 in PF transfer?',
-    a: 'Form 13 is used to transfer PF balance from previous employment account to current UAN-linked account.',
-    cat: 'EPF Transfer',
+    q: 'How to check PF balance without UAN?',
+    a: 'You can retrieve your UAN using your registered mobile number and KYC details, and then access your EPF passbook, PF balance and online services.',
   },
   {
     q: 'How to merge multiple PF accounts?',
-    a: 'Initiate transfer requests for old member IDs to your current UAN and verify service history mapping.',
-    cat: 'EPF Transfer',
+    a: 'Transfer your old PF accounts to your current UAN and check that your service history is properly linked.',
   },
   {
-    q: 'How to check PF balance without UAN?',
-    a: 'You can recover UAN first using registered mobile and KYC details, then access passbook and claim services.',
-    cat: 'Finright PF Consultant',
+    q: 'How can I raise a claim for PF withdrawal online?',
+    a: 'Log in to the EPFO portal, complete KYC, choose the claim type, and submit Form 19 or 10C.',
+  },
+  {
+    q: 'What is Form 13 in PF transfer?',
+    a: 'Form 13 is used to transfer the PF balance from a previous employment account to the current UAN-linked account.',
+  },
+  {
+    q: 'How to check PF withdrawal status online?',
+    a: 'Use the EPFO claim status section on the member portal or the UMANG app with your UAN details.',
+  },
+  {
+    q: 'Can I withdraw PF while still employed?',
+    a: 'EPFO allows partial PF withdrawal for reasons like medical needs, education, or home loans.',
+  },
+  {
+    q: 'What documents are required for PF withdrawal?',
+    a: 'You generally need Aadhaar, PAN, bank details, and correct service/exit information in EPFO records.',
+  },
+  {
+    q: 'What is the waiting period for PF withdrawal after resignation?',
+    a: 'PF final settlement is usually allowed after 2 months of unemployment, subject to EPFO conditions.',
+  },
+  {
+    q: 'Do I need employer approval for online PF withdrawal?',
+    a: 'In many cases, no manual approval is required; however, employer records and exit details must be correctly updated.',
+  },
+  {
+    q: 'How long does it take to receive PF withdrawal after applying?',
+    a: 'Simple claims are usually processed in a few days, but delays can happen if there are mismatches.',
+  },
+  {
+    q: 'Can I withdraw 100% of my PF amount?',
+    a: 'Yes, PF can usually be withdrawn after retirement or 2 months of unemployment, as per EPFO rules.',
+  },
+  {
+    q: 'What is Form 121?',
+    a: 'Form 121 is optional and is used only for tax (TDS) purposes. It is a declaration form used to claim exemption from TDS deduction.',
+  },
+  {
+    q: 'Which bank account should NRIs use for PF withdrawal?',
+    a: 'Use a valid bank account mapped in EPFO records and ensure that KYC details match exactly to avoid rejection.',
+  },
+  {
+    q: 'Are PF withdrawals taxable for NRIs?',
+    a: 'Taxation depends on the length of service, applicable tax treaty rules, and withdrawal conditions. Professional advice is recommended.',
+  },
+  {
+    q: 'Can NRIs withdraw their PF amount online?',
+    a: 'Yes, NRIs can apply, subject to correct KYC details, valid bank information, and compliance with tax and regulatory requirements.',
   },
 ]
 
 function FAQPage() {
-  const [activeCategory, setActiveCategory] = useState('All')
   const [query, setQuery] = useState('')
 
   const filteredFaqs = useMemo(() => {
     return faqData.filter((item) => {
-      const categoryOk = activeCategory === 'All' || item.cat === activeCategory
       const queryOk = item.q.toLowerCase().includes(query.toLowerCase())
-      return categoryOk && queryOk
+      return queryOk
     })
-  }, [activeCategory, query])
+  }, [query])
 
   return (
     <section className="bg-[#EBF4F6] py-14">
@@ -114,22 +94,6 @@ function FAQPage() {
         </div>
 
       <br />
-          {/* <aside className="rounded-xl border border-[#7AB2B2] bg-white p-4">
-            <h2 className="text-lg font-semibold text-[#09637E]">Categories</h2>
-            <div className="mt-4 space-y-2">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`w-full rounded-md px-3 py-2 text-left text-sm md:text-base ${
-                    activeCategory === cat ? 'bg-[#7AB2B2]/30 text-[#09637E]' : 'text-slate-600 hover:bg-[#EBF4F6]'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-          </aside> */}
 
           <div className="space-y-3">
             {filteredFaqs.map((item) => (

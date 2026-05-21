@@ -144,20 +144,7 @@ function PricingPage() {
         </div>
       </section>
 
-      <section className="bg-white py-14">
-        <div className="mx-auto w-[96vw] max-w-[1120px]">
-          <h2 className="text-center text-4xl font-bold">Frequently Asked Questions</h2>
-          <p className="mt-2 text-center text-slate-500">Everything you need to know about our pricing</p>
-          <div className="mx-auto mt-6 max-w-[920px] space-y-2">
-            {pricingFaqs.map((q) => (
-              <details key={q} className="rounded border border-slate-200 bg-white px-4 py-3">
-                <summary className="cursor-pointer text-sm font-medium text-slate-800">{q}</summary>
-                <p className="mt-2 text-sm text-slate-600">Our team shares exact pricing after your PF case assessment.</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+      
     </>
   )
 }

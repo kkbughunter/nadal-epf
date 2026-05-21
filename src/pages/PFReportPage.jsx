@@ -200,44 +200,7 @@ function PFReportPage({ onBookConsultation }) {
         </div>
       </section>
 
-      {/* FAQ SECTION */}
-      <section className="bg-[#EBF4F6] py-16">
-        <div className="mx-auto w-[96vw] max-w-[900px]">
-          <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wide text-[#088395]">
-              FAQs
-            </p>
-
-            <h2 className="mt-3 text-5xl font-bold text-slate-900">
-              Frequently asked questions
-            </h2>
-          </div>
-
-          <div className="mt-10 space-y-4">
-            {faqs.map((q) => (
-              <details
-                key={q}
-                className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
-              >
-                <summary className="cursor-pointer list-none text-base font-semibold text-slate-800">
-                  <div className="flex items-center justify-between gap-4">
-                    {q}
-                    <span className="text-xl transition group-open:rotate-45">
-                      +
-                    </span>
-                  </div>
-                </summary>
-
-                <p className="mt-4 text-sm leading-7 text-slate-600">
-                  Our expert PF analysis report checks your account-specific
-                  risk signals, identifies possible withdrawal issues, and
-                  recommends the next steps to resolve them.
-                </p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* FOUNDER QUOTE */}
       <section className="bg-white py-20">
