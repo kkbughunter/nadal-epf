@@ -147,25 +147,35 @@ function HomePage({ onConnectClick }) {
               Withdraw Your EPF
               <span className="block italic text-[#EBF4F6]">Money Easily.</span>
             </h1>
-            <div className="mt-6 flex max-w-lg items-center gap-6 text-[#EBF4F6]">
-              <div className="flex items-center gap-2">
-                <FaUserShield className="text-sm text-white" />
-                <span className="text-[11px] font-medium">
-                  Lead by Trusted Experts
+            <br />
+            <div className="flex max-w-lg items-start justify-between text-[#EBF4F6]">
+              <div className="flex w-32 flex-col items-start gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5">
+                  <FaUserShield className="text-base text-[#C9D4FF]" />
+                </div>
+
+                <span className="whitespace-nowrap text-[15px] font-semibold leading-5 text-left">
+                  Guaranteed Settlement
                 </span>
               </div>
 
-              <div className="flex items-center gap-2">
-                <FaBolt className="text-sm text-white" />
-                <span className="text-[11px] font-medium">
-                  Quick TAT
+              <div className="flex w-32 flex-col items-start gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5">
+                  <FaBolt className="text-base text-[#C9D4FF]" />
+                </div>
+
+                <span className="whitespace-nowrap text-[15px] font-semibold leading-5 text-left">
+                  Fast & Seamless
                 </span>
               </div>
 
-              <div className="flex items-center gap-2">
-                <FaWallet className="text-sm text-white" />
-                <span className="text-[11px] font-medium">
-                  Maximum PF Gains
+              <div className="flex w-40 flex-col items-start gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5">
+                  <FaWallet className="text-base text-[#C9D4FF]" />
+                </div>
+
+                <span className="whitespace-nowrap text-[15px] font-semibold leading-5 text-left">
+                  Maximum PF Withdrawal
                 </span>
               </div>
             </div>
