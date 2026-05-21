@@ -5,8 +5,15 @@ import comp4 from '../assets/company-logos/comp4.png'
 import comp5 from '../assets/company-logos/comp5.png'
 import comp6 from '../assets/company-logos/comp6.png'
 import comp7 from '../assets/company-logos/comp7.png'
+import comp8 from '../assets/company-logos/comp8.png'
+import comp9 from '../assets/company-logos/comp9.png'
+import comp10 from '../assets/company-logos/comp10.png'
+import comp11 from '../assets/company-logos/comp11.png'
+import comp12 from '../assets/company-logos/comp12.png'
+import comp13 from '../assets/company-logos/comp13.png'
+import comp14 from '../assets/company-logos/comp14.png'
 
-const logos = [
+export const logos = [
   comp1,
   comp2,
   comp3,
@@ -14,10 +21,16 @@ const logos = [
   comp5,
   comp6,
   comp7,
+  comp8,
+  comp9,
+  comp10,
+  // comp11,
+  comp12,
+  comp13,
+  comp14,
 ]
 
 function LogoMarquee() {
-  // repeat more times to avoid empty gap
   const loop = [...logos, ...logos, ...logos, ...logos]
 
   return (
