@@ -47,8 +47,8 @@ function App() {
               onClick={() => handlePageChange('home')}
               className={
                 page === 'home'
-                  ? 'text-lg font-bold text-black underline underline-offset-4'
-                  : 'text-lg text-gray-700 transition-colors hover:text-black'
+                  ? 'text-base font-bold text-black underline underline-offset-4'
+                  : 'text-base text-gray-700 transition-colors hover:text-black'
               }
             >
               HOME
@@ -58,8 +58,8 @@ function App() {
               onClick={() => handlePageChange('pf-report')}
               className={
                 page === 'pf-report'
-                  ? 'text-lg font-bold text-black underline underline-offset-4'
-                  : 'text-lg text-gray-700 transition-colors hover:text-black'
+                  ? 'text-base font-bold text-black underline underline-offset-4'
+                  : 'text-base text-gray-700 transition-colors hover:text-black'
               }
             >
               PF REPORT
@@ -69,8 +69,8 @@ function App() {
               onClick={() => handlePageChange('pricing')}
               className={
                 page === 'pricing'
-                  ? 'text-lg font-bold text-black underline underline-offset-4'
-                  : 'text-lg text-gray-700 transition-colors hover:text-black'
+                  ? 'text-base font-bold text-black underline underline-offset-4'
+                  : 'text-base text-gray-700 transition-colors hover:text-black'
               }
             >
               PRICING
@@ -80,8 +80,8 @@ function App() {
               onClick={() => handlePageChange('about')}
               className={
                 page === 'about'
-                  ? 'text-lg font-bold text-black underline underline-offset-4'
-                  : 'text-lg text-gray-700 transition-colors hover:text-black'
+                  ? 'text-base font-bold text-black underline underline-offset-4'
+                  : 'text-base text-gray-700 transition-colors hover:text-black'
               }
             >
               ABOUT US
@@ -91,8 +91,8 @@ function App() {
               onClick={() => handlePageChange('contact')}
               className={
                 page === 'contact'
-                  ? 'text-lg font-bold text-black underline underline-offset-4'
-                  : 'text-lg text-gray-700 transition-colors hover:text-black'
+                  ? 'text-base font-bold text-black underline underline-offset-4'
+                  : 'text-base text-gray-700 transition-colors hover:text-black'
               }
             >
               CONTACT US
@@ -102,8 +102,8 @@ function App() {
               onClick={() => handlePageChange('faq')}
               className={
                 page === 'FAQ'
-                  ? 'text-lg font-bold text-black underline underline-offset-4'
-                  : 'text-lg text-gray-700 transition-colors hover:text-black'
+                  ? 'text-base font-bold text-black underline underline-offset-4'
+                  : 'text-base text-gray-700 transition-colors hover:text-black'
               }
             >
               FAQ
@@ -135,7 +135,7 @@ function App() {
           <div className="grid grid-cols-1 lg:grid-cols-12">
             <div className="lg:col-span-4 space-y-5">
               <div>
-                <h5 className="text-lg font-semibold mb-3">Registered Office</h5>
+                <h5 className="text-base font-semibold mb-3">Registered Office</h5>
                 <div className="flex items-start gap-3 text-sm leading-7">
                   <FaMapMarkerAlt className="mt-1 text-[#088395]" />
                   <div>
@@ -146,7 +146,7 @@ function App() {
               </div>
 
               <div>
-                <h5 className="text-lg font-semibold mb-3">Chennai Office</h5>
+                <h5 className="text-base font-semibold mb-3">Chennai Office</h5>
                 <div className="flex items-start gap-3 text-sm leading-7">
                   <FaMapMarkerAlt className="mt-1 text-[#088395]" />
                   <div>
@@ -157,7 +157,7 @@ function App() {
               </div>
 
               <div>
-                <h5 className="text-lg font-semibold mb-3">Contact Info</h5>
+                <h5 className="text-base font-semibold mb-3">Contact Info</h5>
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center gap-3">
                     <FaPhoneAlt className="text-[#088395]" />
@@ -171,7 +171,7 @@ function App() {
               </div>
 
               <div>
-                <h5 className="text-lg font-semibold mb-3">Working Hours</h5>
+                <h5 className="text-base font-semibold mb-3">Working Hours</h5>
                 <div className="flex items-center gap-3 text-sm">
                   <FaClock className="text-[#088395]" />
                   <span>9.30 AM IST - 6.30 PM IST (Mon-Sat)</span>
@@ -179,7 +179,7 @@ function App() {
               </div>
 
               <div>
-                <h5 className="text-lg font-semibold mb-4">Follow Us</h5>
+                <h5 className="text-base font-semibold mb-4">Follow Us</h5>
                 <div className="flex items-center gap-4">
                   <a
                     href="https://web.whatsapp.com/send?phone=916385871009"
@@ -226,7 +226,7 @@ function App() {
             </div>
 
             <div className="lg:col-span-8 mt-8 lg:mt-0">
-              <h5 className="text-lg font-semibold mb-5">Our Locations</h5>
+              <h5 className="text-base font-semibold mb-5">Our Locations</h5>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1973.8367954040477!2d77.8618526927172!3d8.335194499579375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b047f35b8142947%3A0x84633c63b3b3be0b!2sNadal%20Business%20Services%20Private%20Limited!5e0!3m2!1sen!2sin!4v1605001695756!5m2!1sen!2sin"
