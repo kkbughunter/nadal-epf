@@ -54,7 +54,7 @@ function ContactPage({ onConnectClick }) {
               Reach out to us: <span className="font-normal text-[#088395]">+91 63858 71009</span>
             </p>
             <p className="mt-2 text-base text-slate-600">
-              Note: This number will only be available Monday to Friday, 10 AM to 7 PM IST.
+              Note: This number will only be available Monday to Saturday, 9:30 AM to 6:30 PM IST.
             </p>
           </div>
         </div>
