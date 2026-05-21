@@ -69,8 +69,8 @@ function App() {
               onClick={() => handlePageChange('pricing')}
               className={
                 page === 'pricing'
-                  ? 'font-bold text-black underline underline-offset-4'
-                  : 'text-gray-700 transition-colors hover:text-black'
+                  ? 'text-lg font-bold text-black underline underline-offset-4'
+                  : 'text-lg text-gray-700 transition-colors hover:text-black'
               }
             >
               PRICING
@@ -80,8 +80,8 @@ function App() {
               onClick={() => handlePageChange('about')}
               className={
                 page === 'about'
-                  ? 'font-bold text-black underline underline-offset-4'
-                  : 'text-gray-700 transition-colors hover:text-black'
+                  ? 'text-lg font-bold text-black underline underline-offset-4'
+                  : 'text-lg text-gray-700 transition-colors hover:text-black'
               }
             >
               ABOUT US
@@ -91,8 +91,8 @@ function App() {
               onClick={() => handlePageChange('contact')}
               className={
                 page === 'contact'
-                  ? 'font-bold text-black underline underline-offset-4'
-                  : 'text-gray-700 transition-colors hover:text-black'
+                  ? 'text-lg font-bold text-black underline underline-offset-4'
+                  : 'text-lg text-gray-700 transition-colors hover:text-black'
               }
             >
               CONTACT US
@@ -102,8 +102,8 @@ function App() {
               onClick={() => handlePageChange('faq')}
               className={
                 page === 'FAQ'
-                  ? 'font-bold text-black underline underline-offset-4'
-                  : 'text-gray-700 transition-colors hover:text-black'
+                  ? 'text-lg font-bold text-black underline underline-offset-4'
+                  : 'text-lg text-gray-700 transition-colors hover:text-black'
               }
             >
               FAQ
