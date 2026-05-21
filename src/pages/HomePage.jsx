@@ -76,15 +76,15 @@ function HomePage({ onConnectClick }) {
       <section className="flex min-h-[calc(90vh-3rem)] items-center bg-[linear-gradient(160deg,#09637E,#088395)] py-14 text-white">
         <div className="mx-auto grid w-[96vw] max-w-[1120px] gap-8 lg:grid-cols-[1fr_420px] lg:items-center">
           <div>
-            <p className="text-xs text-[#EBF4F6]">AI powered PF issue detection</p>
+            <p className="text-xs text-[#EBF4F6]">Intelligent PF Issue Resolution & Pan India Support</p>
             <h1 className="mt-2 font-serif text-5xl leading-tight md:text-6xl">
-              EPF Withdrawal
-              <span className="block italic text-[#EBF4F6]">Made Simple.</span>
+              Withdraw Your EPF
+              <span className="block italic text-[#EBF4F6]">Money Easily.</span>
             </h1>
             <div className="mt-5 grid max-w-md grid-cols-3 gap-3 text-[11px] text-[#EBF4F6]">
-              <div>Trusted experts</div>
-              <div>Quick checks</div>
-              <div>Maximum PF recovered</div>
+              <div>Lead by Trusted Experts</div>
+              <div>Quick TAT</div>
+              <div>Maximum PF Gains</div>
             </div>
             <button onClick={onConnectClick} className="mt-6 rounded-md bg-white px-5 py-2 text-xs font-bold text-[#09637E] hover:bg-[#EBF4F6]">Connect Now</button>
             <p className="mt-2 text-xs text-[#EBF4F6]">Rs4,00,000+ Claim Resolved</p>
@@ -104,7 +104,7 @@ function HomePage({ onConnectClick }) {
 
       <section className="bg-white py-10">
         <div className="mx-auto w-[96vw] max-w-[1120px]">
-          <p className="text-center text-[10px] tracking-[0.16em] text-slate-500">TRUSTED BY PROFESSIONALS WORKING AT</p>
+          <p className="text-center text-[10px] tracking-[0.16em] text-slate-500">PREFERRED BY PROFESSIONALS WORKING AT</p>
           <div className="mt-4">
             <LogoMarquee />
           </div>

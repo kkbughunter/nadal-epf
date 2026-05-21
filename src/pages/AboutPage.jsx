@@ -29,33 +29,27 @@ function AboutPage() {
         <div className="mx-auto w-[92vw] max-w-[1120px] text-slate-800">
           <h1 className="text-4xl font-bold md:text-5xl">About Us</h1>
           <div className="mt-8 space-y-5 text-base leading-8 text-slate-700 md:text-lg">
-            <p>Personal Finance decisions shape some of the most important moments in life.</p>
             <p>
-              Yet when people face financial questions about investments, taxes, insurance, provident fund withdrawals, inheritance, or global
-              diversification they are often left navigating a fragmented system filled with conflicting advice, product sales, and confusing
-              information.
+              NADAL Business Services (NBS) is a fast-growing end-to-end HR service provider. It is a professionally managed company led by a highly experienced team. The team has expertise in delivering HR-related services across a wide range of industries, including IT, Engineering, Marine, Financial Services, ITES, Manufacturing, Healthcare, Hospitality, FMCG, and Logistics sectors.
             </p>
-            <p className="font-semibold text-slate-900">nadalEPF was founded to change that.</p>
+            <p className="font-semibold text-slate-900">Nadal EPF Prime: </p>
             <p>
-              We believe that every individual deserves on-demand, clear, unbiased guidance and hands-on assistance when dealing with their money.
-              Not product pushing. Not generic internet gyan. But legit expertise that helps people solve real financial problems and make confident
-              decisions.
+              Nadal EPF Prime is building the infrastructure and ecosystem for a new kind of Provident Fund experience in India—where individuals always have access to trusted support whenever they need it, ensuring simplicity, transparency, and financial confidence throughout their EPF journey.
             </p>
             <p>
-              nadalEPF is building the infrastructure and ecosystem for a new kind of financial experience in India, one where individuals always have
-              access to trusted help whenever they need it.
+              Simplifying your EPF journey with expert guidance. Your trusted partner for hassle-free PF withdrawals, claim support, and end-to-end assistance for a smooth experience. We ensure fast, reliable, and transparent service at every step, helping you get your hard-earned money back without stress and with complete financial peace of mind.
             </p>
           </div>
 
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <p className="text-lg text-slate-800 md:text-xl">People are constantly dealing with questions like:</p>
             <ul className="mt-4 list-disc space-y-2 pl-6 text-base italic leading-7 text-slate-700 md:text-lg">
               {questions.map((q) => (
                 <li key={q}>{q}</li>
               ))}
-            </ul>
+            </ul> */}
           </div>
-
+{/* 
           <div className="mt-8 space-y-5 text-base leading-8 text-slate-700 md:text-lg">
             <p>Some of these questions arise during major life events. Many others show up quietly in everyday financial decisions.</p>
             <p>
@@ -92,8 +86,8 @@ function AboutPage() {
               </a>
             </p>
           </div>
-        </div>
-      </section>
+        </div>*/}
+      </section> 
 
       <section className="bg-[#EBF4F6] py-10">
         <div className="mx-auto w-[92vw] max-w-[1120px]">

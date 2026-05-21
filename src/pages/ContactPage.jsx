@@ -5,17 +5,17 @@ function ContactPage({ onConnectClick }) {
     <section className={cn('py-14', colors.bg.page)}>
       <div className={cn('mx-auto w-[92vw] max-w-[1120px]', colors.text.secondary)}>
         <h1 className={cn('text-5xl font-bold', colors.primary.text)}>Contact Us</h1>
-        <p className="mt-6 text-[18px] leading-8">
+        {/* <p className="mt-6 text-[18px] leading-8">
           If you ever face any issue with our services or want to share a feedback you can reach out to us at:
-        </p>
+        </p> */}
 
         <div className="mt-6 space-y-6 text-[18px] leading-8">
           <div>
             <h2 className="text-3xl font-semibold">Address</h2>
-            <p className="mt-2">302, Orion business park,</p>
-            <p>Himat Mansion CHS ltd.,</p>
-            <p>Corner of shimpoli signal and Natakwala lane, S.V road,</p>
-            <p>Borivali (West), Mumbai 400092</p>
+            <p className="mt-2">4/222, First Floor, </p>
+            <p>East Coast Rd,</p>
+            <p>Palavakkam, </p>
+            <p>Chennai, Tamil Nadu - 600 041</p>
           </div>
 
           <div>
@@ -30,7 +30,7 @@ function ContactPage({ onConnectClick }) {
             </button>
           </div>
 
-          <div>
+          {/* <div>
             <h2 className="text-5xl font-bold">Escalations</h2>
             <p className="mt-3">
               We&apos;re listening! Your concerns are of paramount importance to us. To make this process swift and seamless, we have designed a 3-level
@@ -49,7 +49,7 @@ function ContactPage({ onConnectClick }) {
             <p>poonam.upadhyay@nadalbusiness.com</p>
             <p className="mt-2"><span className="font-semibold">L3 :</span> Ketan Das</p>
             <p>ketan.das@nadalbusiness.com</p>
-          </div>
+          </div> */}
 
           <div>
             <p className="text-3xl font-semibold">
