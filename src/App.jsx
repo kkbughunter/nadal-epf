@@ -84,7 +84,7 @@ function App() {
                   : 'text-base text-gray-700 transition-colors hover:text-black'
               }
             >
-              ABOUT US
+              ABOUT
             </button>
 
             <button
@@ -161,7 +161,7 @@ function App() {
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center gap-3">
                     <FaPhoneAlt className="text-[#088395]" />
-                    <span>(+91) 63858 71009</span>
+                    <span>(+91) 81481 41286</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <FaEnvelope className="text-[#088395]" />

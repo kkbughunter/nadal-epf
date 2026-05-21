@@ -1,13 +1,13 @@
 import { useMemo, useState } from 'react'
 
-const categories = [
-  'All',
-  'EPF withdrawal',
-  'EPF Transfer',
-  'Joint Declaration and KYC',
-  'EPFO Rules',
-  'Finright PF Consultant',
-]
+// const categories = [
+//   'All',
+//   'EPF withdrawal',
+//   'EPF Transfer',
+//   'Joint Declaration and KYC',
+//   'EPFO Rules',
+//   'Finright PF Consultant',
+// ]
 
 const faqData = [
   {
@@ -96,6 +96,8 @@ function FAQPage() {
 
   return (
     <section className="bg-[#EBF4F6] py-14">
+      <br />
+      <br />
       <div className="mx-auto w-[92vw] max-w-[1120px]">
         <h1 className="text-center text-3xl font-bold text-[#09637E] md:text-4xl">Frequently Asked Questions</h1>
         <p className="mt-4 text-center text-base text-slate-500 md:text-lg">
@@ -111,8 +113,8 @@ function FAQPage() {
           />
         </div>
 
-        <div className="mt-8 grid gap-6 lg:grid-cols-[260px_1fr]">
-          <aside className="rounded-xl border border-[#7AB2B2] bg-white p-4">
+      <br />
+          {/* <aside className="rounded-xl border border-[#7AB2B2] bg-white p-4">
             <h2 className="text-lg font-semibold text-[#09637E]">Categories</h2>
             <div className="mt-4 space-y-2">
               {categories.map((cat) => (
@@ -127,7 +129,7 @@ function FAQPage() {
                 </button>
               ))}
             </div>
-          </aside>
+          </aside> */}
 
           <div className="space-y-3">
             {filteredFaqs.map((item) => (
@@ -143,7 +145,6 @@ function FAQPage() {
             )}
           </div>
         </div>
-      </div>
     </section>
   )
 }

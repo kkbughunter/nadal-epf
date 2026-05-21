@@ -89,15 +89,62 @@ function HomePage({ onConnectClick }) {
             <button onClick={onConnectClick} className="mt-6 rounded-md bg-white px-5 py-2 text-xs font-bold text-[#09637E] hover:bg-[#EBF4F6] cursor-pointer">Connect Now</button>
             <p className="mt-2 text-xs text-[#EBF4F6]">Rs4,00,000+ Claim Resolved</p>
           </div>
-          <aside className="rounded-2xl bg-white p-4 shadow-2xl shadow-black/30">
-            <div className="mb-2 flex items-center justify-between">
-              <strong className="text-sm text-slate-900">Thread of Resolution</strong>
-              <span className="text-[10px] font-bold text-[#088395]">Live</span>
+          <aside className="relative overflow-hidden rounded-[32px] border border-white/20 bg-white/10 p-3 backdrop-blur-md shadow-2xl shadow-black/30">
+            {/* Mobile */}
+            <div className="mx-auto h-[580px] w-full max-w-[360px] rounded-[42px] border-[10px] border-slate-900 bg-white shadow-2xl">              
+              {/* Mobile Notch */}
+              <div className="mx-auto mt-2 h-5 w-28 rounded-full bg-slate-900" />
+              {/* inner content wrapper */}
+              <div className="flex h-full flex-col px-5 pb-6 pt-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#088395]">
+                  Consult Now
+                </p>
+
+                <h3 className="mt-2 text-lg font-bold leading-snug text-slate-900">
+                  Detects issues such as:
+                </h3>
+                {/* scrolling area */}
+                <div className="relative mt-4 mb-2 flex-1 overflow-hidden">
+                  <div className="animate-scroll-y space-y-3">
+                    {[
+                      'Withdrawal Eligibility',
+                      'Claim Rejected without Error',
+                      'Stuck since 6+ months?',
+                      'Claim Status not moving',
+                      'UAN Discrepancies',
+                      'Transfer Failures',
+                      'Incorrect Contributions',
+                      'KYC Mismatches',
+                      'Inactive Accounts',
+                      'Service Overlaps',
+                      'Employer Error',
+                    ]
+                      .concat([
+                        'Withdrawal Eligibility',
+                        'Claim Rejected without Error',
+                        'Stuck since 6+ months?',
+                        'Claim Status not moving',
+                        'UAN Discrepancies',
+                        'Transfer Failures',
+                      ])
+                      .map((item, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 shadow-sm"
+                        >
+                          <div className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[#EBF4F6]">
+                            <div className="h-2.5 w-2.5 rounded-full bg-[#088395]" />
+                          </div>
+
+                          <p className="text-sm font-medium text-slate-700">
+                            {item}
+                          </p>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </div>
             </div>
-            <p className="text-xs text-slate-600">
-              EPF withdrawal rejected while salary transfer mismatch persisted. We fixed KYC + service history and claim was successfully settled.
-            </p>
-            <img src={heroImage} alt="Story visual" className="mt-3 h-44 w-full rounded-lg object-cover" />
           </aside>
         </div>
       </section>
@@ -254,7 +301,7 @@ function HomePage({ onConnectClick }) {
         </div>
       </section>
 
-      <section className="bg-[#EBF4F6] py-14">
+      {/* <section className="bg-[#EBF4F6] py-14">
         <div className="mx-auto w-[96vw] max-w-[1120px]">
           <h2 className="text-center font-serif text-5xl text-[#09637E]">Frequently Asked Questions</h2>
           <div className="mx-auto mt-6 max-w-[860px] space-y-2">
@@ -266,7 +313,7 @@ function HomePage({ onConnectClick }) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

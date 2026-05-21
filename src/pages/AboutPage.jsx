@@ -27,7 +27,7 @@ function AboutPage() {
     <>
       <section className="bg-[#EBF4F6] py-14">
         <div className="mx-auto w-[92vw] max-w-[1120px] text-slate-800">
-          <h1 className="text-4xl font-bold md:text-5xl">About Us</h1>
+          <h1 className="text-4xl font-bold md:text-5xl">About</h1>
           <div className="mt-8 space-y-5 text-base leading-8 text-slate-700 md:text-lg">
             <p>
               NADAL Business Services (NBS) is a fast-growing end-to-end HR service provider. It is a professionally managed company led by a highly experienced team. The team has expertise in delivering HR-related services across a wide range of industries, including IT, Engineering, Marine, Financial Services, ITES, Manufacturing, Healthcare, Hospitality, FMCG, and Logistics sectors.
