@@ -2,10 +2,26 @@ import { useEffect, useState } from 'react'
 import heroImage from '../assets/image-placeholder3.png'
 import skyImage from '../assets/image-placeholder2.png'
 import sunsetImage from '../assets/image-placeholder1.png'
-import companyLogoPlaceholder from '../assets/company-logo-placeholder.png'
 import LogoMarquee from '../components/LogoMarquee'
 
-const partners = Array.from({ length: 6 })
+import comp1 from '../assets/company-logos/comp1.png'
+import comp2 from '../assets/company-logos/comp2.png'
+import comp3 from '../assets/company-logos/comp3.png'
+import comp4 from '../assets/company-logos/comp4.png'
+import comp5 from '../assets/company-logos/comp5.png'
+import comp6 from '../assets/company-logos/comp6.png'
+import comp7 from '../assets/company-logos/comp7.png'
+
+
+const partners = [
+  comp1,
+  comp2,
+  comp3,
+  comp4,
+  comp5,
+  comp6,
+  comp7,
+]
 const statCards = [
   { value: 5588, suffix: '', label: 'Cases solved' },
   { value: 160, suffix: '+', label: 'Experts on board' },
@@ -91,7 +107,7 @@ function HomePage({ onConnectClick }) {
           </div>
           <aside className="relative overflow-hidden rounded-[32px] border border-white/20 bg-white/10 p-3 backdrop-blur-md shadow-2xl shadow-black/30">
             {/* Mobile */}
-            <div className="mx-auto h-[580px] w-full max-w-[360px] rounded-[42px] border-[10px] border-slate-900 bg-white shadow-2xl">              
+            <div className="mx-auto h-[580px] w-full max-w-[360px] rounded-[42px] border-[10px] border-slate-900 bg-white shadow-2xl">
               {/* Mobile Notch */}
               <div className="mx-auto mt-2 h-5 w-28 rounded-full bg-slate-900" />
               {/* inner content wrapper */}
@@ -150,11 +166,13 @@ function HomePage({ onConnectClick }) {
       </section>
 
       <section className="bg-white py-10">
-        <div className="mx-auto w-[96vw] max-w-[1120px]">
+        <div className="mx-auto w-[96vw] ">
           <p className="text-center text-[10px] tracking-[0.16em] text-slate-500">PREFERRED BY PROFESSIONALS WORKING AT</p>
           <div className="mt-4">
             <LogoMarquee />
           </div>
+                  <div className="mx-auto w-[96vw] max-w-[1120px]">
+
           <div className="mt-4 grid gap-3 md:grid-cols-4">
             {statCards.map((stat) => (
               <article key={stat.label} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
@@ -162,6 +180,7 @@ function HomePage({ onConnectClick }) {
                 <p className="text-xs text-slate-500">{stat.label}</p>
               </article>
             ))}
+          </div>
           </div>
         </div>
       </section>
@@ -293,15 +312,24 @@ function HomePage({ onConnectClick }) {
       <section className="bg-white py-14">
         <div className="mx-auto w-[96vw] max-w-[1120px]">
           <h2 className="text-center font-serif text-5xl text-[#09637E]">Nadal EPF In The News</h2>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
-            {partners.map((_, idx) => (
-              <img key={idx} src={companyLogoPlaceholder} alt="" className="h-8 w-16 object-contain" />
+          <div className="mt-10 grid grid-cols-2 items-center gap-8 md:grid-cols-4 lg:grid-cols-7">
+            {partners.map((logo, idx) => (
+              <div
+                key={idx}
+                className="flex h-20 items-center justify-center rounded-2xl border border-slate-200 bg-white  shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <img
+                  src={logo}
+                  alt={`Company ${idx + 1}`}
+                  className="max-h-10 w-auto object-contain opacity-80 transition hover:opacity-100"
+                />
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      
+
     </>
   )
 }
