@@ -138,8 +138,8 @@ function PricingPage() {
       <section className="bg-[#EBF4F6] py-14">
         <div className="mx-auto w-[96vw] max-w-[1120px] rounded-xl border border-[#7AB2B2] bg-white p-8 text-center">
           <h2 className="text-3xl font-bold">Want to know the exact fee?</h2>
-          <p className="mt-2 text-slate-600">Book a free consultation call and get a detailed PF audit powered by expert AI.</p>
-          <button className="mt-5 rounded bg-[#088395] px-4 py-2 text-sm font-semibold text-white hover:bg-[#09637E]">Book Free Consultation</button>
+          <p className="mt-2 text-slate-600">Book a PF consultation call and get a detailed PF audit powered by expert AI.</p>
+          <button className="mt-5 rounded bg-[#088395] px-4 py-2 text-sm font-semibold text-white hover:bg-[#09637E]">Book PF Consultation</button>
           {/* <p className="mt-2 text-xs text-[#088395]">Expert slots available today</p> */}
         </div>
       </section>

@@ -89,7 +89,7 @@ function AboutPage() {
         </div>*/}
       </section> 
 
-      <section className="bg-[#EBF4F6] py-10">
+      {/* <section className="bg-[#EBF4F6] py-10">
         <div className="mx-auto w-[92vw] max-w-[1120px]">
           <h2 className="text-center text-3xl font-bold text-slate-900 md:text-4xl">Meet Our Team</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -119,7 +119,7 @@ function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

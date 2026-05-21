@@ -36,7 +36,7 @@ function App() {
 
           <button
             onClick={() => handlePageChange('home')}
-            className="transition-opacity hover:opacity-80"
+            className="-ml-4 transition-opacity hover:opacity-80"
           >
             <img src={logo} alt="nadal EPF logo" className="h-15 w-auto cursor-pointer " />
           </button>

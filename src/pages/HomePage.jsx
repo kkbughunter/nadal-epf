@@ -155,7 +155,7 @@ function HomePage({ onConnectClick }) {
                 </span>
               </div>
             </div>
-            <button onClick={onConnectClick} className="mt-6 rounded-md bg-white px-5 py-2 text-xs font-bold text-[#09637E] hover:bg-[#EBF4F6] cursor-pointer">Connect Now</button>
+            <button onClick={onConnectClick} className="mt-6 rounded-md bg-white px-5 py-2 text-xs font-bold text-[#09637E] hover:bg-[#EBF4F6] cursor-pointer">Consult now</button>
             <p className="mt-2 text-xs text-[#EBF4F6]">Rs4,00,000+ Claim Resolved</p>
           </div>
           <aside className="relative overflow-hidden rounded-[32px] border border-white/20 bg-white/10 p-3 backdrop-blur-md shadow-2xl shadow-black/30">
@@ -261,7 +261,7 @@ function HomePage({ onConnectClick }) {
                 <span className="text-slate-500">Initial support</span>
               </div>
             </div>
-            <button className="mt-6 rounded-md bg-[#088395] px-5 py-2 text-xs font-bold text-white hover:bg-[#09637E]">Check My PF Now -&gt;</button>
+            <button onClick={onConnectClick} className="rounded-md bg-[#09637E] px-5 py-2 text-xs font-semibold text-white hover:bg-[#088395] cursor-pointer">Check My PF Now -&gt;</button>
           </div>
           <div className="rounded-[24px] border-8 border-slate-700 bg-white p-2">
             <img src={skyImage} alt="PF screen" className="h-[360px] w-full rounded-[16px] object-cover" />
@@ -281,7 +281,7 @@ function HomePage({ onConnectClick }) {
             ))}
           </div>
           <div className="mt-6 flex justify-center">
-            <button onClick={onConnectClick} className="rounded-md bg-[#09637E] px-5 py-2 text-xs font-semibold text-white hover:bg-[#088395] cursor-pointer">Connect Now</button>
+            <button onClick={onConnectClick} className="rounded-md bg-[#09637E] px-5 py-2 text-xs font-semibold text-white hover:bg-[#088395] cursor-pointer">Consult now</button>
           </div>
         </div>
       </section>

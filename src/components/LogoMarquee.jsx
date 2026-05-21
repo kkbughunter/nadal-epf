@@ -22,13 +22,13 @@ function LogoMarquee() {
 
   return (
     <section className="overflow-hidden py-4">
-      <div className="flex w-max animate-marquee items-center gap-10">
+      <div className="flex w-max animate-marquee items-center gap-12">
         {loop.map((logo, idx) => (
           <img
             key={idx}
             src={logo}
             alt={`Company ${idx + 1}`}
-            className="h-8 w-auto shrink-0 object-contain opacity-70 transition duration-300 hover:opacity-100"
+            className="h-10 w-auto shrink-0 object-contain transition duration-300"
           />
         ))}
       </div>

@@ -73,7 +73,7 @@ function FormModal({ isOpen, onClose }) {
               colors.modal.headerText
             )}
           >
-            Book Free Consultation
+            Book PF Consultation
           </h2>
 
           <button

@@ -31,7 +31,7 @@ function LeadForm({ light, onBookConsultation }) {
         onClick={handleClick}
         className={cn('mt-3 w-full rounded-full py-3 text-xs font-bold transition cursor-pointer', colors.accent.main, colors.accent.hover, 'text-white')}
       >
-        Book Free Consultation →
+        Book PF Consultation →
       </button>
     </div>
   )
